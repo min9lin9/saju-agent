@@ -50,10 +50,13 @@ tests/fixtures/                 # 실측 응답 HTML (A027, B017)
 
 ## 확장 경로
 
-- 엔드포인트가 막히면 `min9lin9/saju-gpt`의 `core/manseryeok.py`(MIT)로
-  오프라인 명식 계산을 붙일 수 있다.
+- 엔드포인트가 막히면 오프라인 대안이 있다:
+  - `saju-fortune` npm 패키지(`npm i -g saju-fortune`) — `analyzeSaju`/`checkCompatibility`
+    로 로컬 사주·궁합 분석. `min9lin9/k-skill`의 `docs/features/saju-fortune.md` 참고.
+  - `min9lin9/saju-gpt`의 `core/manseryeok.py`(MIT) — 만세력 엔진.
 - 더 깊은 평생사주 풀이는 `min9lin9/saju-skill`(18장 목차·해석 근거) 참고.
 - 프로필의 `location`(출생지)은 추후 별자리(서양 점성술) 기능과 진태양시 보정에 사용 예정.
+- 작명은 `naming-house` npm 패키지 + `min9lin9/k-skill`의 naming-house 가이드로 확장 가능.
 
 ## 면책
 
