@@ -1,8 +1,9 @@
 # saju-agent 🔮
 
-OpenClaw용 사주·운세·궁합 스킬. 생년월일시를 넣으면 신한라이프 운세 엔드포인트를
-curl로 직접 호출해 **사주팔자(명식) + 오늘의 운세 + 궁합**을 봐준다.
-별도 서버·엔진·API 키 없음.
+OpenClaw용 사주·운세·궁합·별자리 스킬. 생년월일시를 넣으면 신한라이프 운세 엔드포인트를
+curl로 직접 호출해 **사주팔자(명식) + 오늘의 운세 + 궁합**을 보고,
+출생지까지 있으면 `astronomy-engine`으로 **네이탈 차트(별자리)**를 계산해
+사주와 별자리를 교차 해석한다. 별도 서버·API 키 없음.
 
 ## 이렇게 설치하세요 (OpenClaw에게)
 
@@ -32,6 +33,9 @@ OPENCLAW_WORKSPACE=/path ./install.sh   # 다른 워크스페이스에 설치
 | "다음 주 금요일 운세" | `specific_*`를 해당 날짜로 설정해 조회 |
 | "내 프로필 저장해줘" | `<workspace>/saju/profiles.json`에 저장, 이후 이름으로 조회. 출생지는 선택 — 추후 별자리·진태양시 보정용 |
 | "매일 아침 운세 보내줘" | OpenClaw cron/heartbeat 등록 안내 |
+| "별자리도 봐줘" | natal.mjs → 행성 별자리·하우스·어스펙트·ASC/MC |
+| "사주랑 별자리 같이 봐줘" | 오행↔원소, 일간↔태양/달/ASC 교차 해석 |
+| "별자리 궁합도" | natal.mjs --synastry → 시나스트리 점수 |
 
 응답에는 항상 사주정보(사주팔자·십신·오행 점수·신강/신약·대운)가 포함된다.
 지원하는 전체 운세 코드(주간/월간/토정비결/건강운/로또 등)는
@@ -43,6 +47,8 @@ OPENCLAW_WORKSPACE=/path ./install.sh   # 다른 워크스페이스에 설치
 skills/saju/SKILL.md            # 스킬 본체 — 트리거, curl 레시피, 답변 톤
 skills/saju/references/codes.md # unse_code 표 + 파라미터 스펙 (실측 문서)
 skills/saju/references/safety.md# 안전 원칙 (단정 금지, 면책)
+skills/saju/references/cities.json # 한국 주요도시 좌표 (별자리용)
+skills/saju/scripts/natal.mjs   # 네이탈 차트 CLI (tune4unni engine 포팅)
 skills/saju/profiles.example.json
 install.sh
 tests/fixtures/                 # 실측 응답 HTML (A027, B017)
@@ -55,7 +61,9 @@ tests/fixtures/                 # 실측 응답 HTML (A027, B017)
     로 로컬 사주·궁합 분석. `min9lin9/k-skill`의 `docs/features/saju-fortune.md` 참고.
   - `min9lin9/saju-gpt`의 `core/manseryeok.py`(MIT) — 만세력 엔진.
 - 더 깊은 평생사주 풀이는 `min9lin9/saju-skill`(18장 목차·해석 근거) 참고.
-- 프로필의 `location`(출생지)은 추후 별자리(서양 점성술) 기능과 진태양시 보정에 사용 예정.
+- 프로필의 `location`(출생지)은 별자리 계산과 진태양시 보정에 사용한다.
+- 별자리 엔진은 `min9lin9/tune4unni`의 `backend/src/services/astrology/engine.ts`
+  포팅(트로피컬 황도대 + Whole Sign 하우스, astronomy-engine).
 - 작명은 `naming-house` npm 패키지 + `min9lin9/k-skill`의 naming-house 가이드로 확장 가능.
 
 ## 면책
