@@ -1,0 +1,27 @@
+{
+  "default": "me",
+  "profiles": {
+    "me": {
+      "name": "홍길동",
+      "gender": "M",
+      "sl_cal": "S",
+      "birth_year": "1998",
+      "birth_month": "10",
+      "birth_day": "27",
+      "birth_hour": "20",
+      "location": "서울",
+      "note": "양력 1998-10-27 저녁 8시(戌시)"
+    },
+    "mom": {
+      "name": "어머니",
+      "gender": "F",
+      "sl_cal": "L",
+      "birth_year": "1965",
+      "birth_month": "03",
+      "birth_day": "12",
+      "birth_hour": "",
+      "location": "",
+      "note": "음력, 태어난 시간 모름"
+    }
+  }
+}
