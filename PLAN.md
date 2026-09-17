@@ -30,6 +30,11 @@ OpenClaw 스킬을 구현한다. **GitHub URL을 OpenClaw에게 주고 "설치�
   해석 근거 — 톤/안전장치를 그대로 계승.
 - `min9lin9/saju-gpt`: `core/manseryeok.py`(MIT, 만세력 엔진) — 이번 범위엔 curl만 쓰지만
   향후 오프라인 명식 계산 옵션으로 README에 언급.
+- `min9lin9/k-skill`: `saju-fortune` 스킬 가이드 — 인터뷰 입력 표(이름/양음력/생일/시간/성별/
+  출생 시군구/주제), `saju-fortune`·`naming-house` npm 패키지(실재 확인, 오프라인 대안).
+  출생 시군구(선택) 입력은 사용자 요청의 location 필드와 일치.
+- 계정 전체 스윕 결과(101개 레포 README + 파일트리): 사주 관련은 saju-gpt, saju-skill,
+  k-skill 3개뿐. 나머지 히트(astro=zodiac 무관, tarot 없음)는 무관.
 
 ## 레포 구조
 ```
