@@ -56,7 +56,7 @@ const JIE_BY_MONTH = [
   ['cheongmyeong', 15],//  4 Apr  청명
   ['ipha', 45],        //  5 May  입하
   ['mangjong', 75],    //  6 Jun  망종
-  ['haji', 105],       //  7 Jul  하지
+  ['soseo', 105],      //  7 Jul  소서
   ['ipchu', 135],      //  8 Aug  입추
   ['baengno', 165],    //  9 Sep  백로
   ['hallo', 195],      // 10 Oct  한로

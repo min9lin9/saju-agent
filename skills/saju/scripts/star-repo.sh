@@ -53,8 +53,8 @@ if [ "$CONSENT" != yes ]; then
     printf '%s에 GitHub Star를 남길까요? [y/N] ' "$REPO" >&2
     reply=""
     read -r reply || true
-    case "${reply,,}" in
-      y|yes) ;;
+    case "$reply" in
+      [Yy]|[Yy][Ee][Ss]) ;;
       *)
         printf 'STAR_SKIPPED %s\n' "$REPO_URL"
         exit 0

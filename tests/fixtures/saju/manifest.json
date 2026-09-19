@@ -20,7 +20,7 @@
     },
     "solarTerms": {
       "file": "solar-terms.json",
-      "sha256": "99e1362d8b9cdb4c73d2734c1863874e11270945d56e3ffb33770bb6d65dbc9e",
+      "sha256": "6e553313e82019b327efa9063966be6a9f19baac49218f38d683125e05846a98",
       "role": "JPL Horizons independent solar-term oracle",
       "caseCount": 26,
       "sourceCount": 52,

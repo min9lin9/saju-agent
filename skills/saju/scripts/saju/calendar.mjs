@@ -57,7 +57,7 @@ export const JIE_BY_MONTH = [
   { id: 'cheongmyeong', angleDeg: 15 },
   { id: 'ipha', angleDeg: 45 },
   { id: 'mangjong', angleDeg: 75 },
-  { id: 'haji', angleDeg: 105 },
+  { id: 'soseo', angleDeg: 105 },
   { id: 'ipchu', angleDeg: 135 },
   { id: 'baengno', angleDeg: 165 },
   { id: 'hallo', angleDeg: 195 },

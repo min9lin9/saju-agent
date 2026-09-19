@@ -35,7 +35,7 @@ const KNOWN_LIMITATIONS = new Set([
 // The 26-case solar-term oracle the fixture must contain, in fixture id form.
 const JIE_BY_MONTH = [
   ['sohan', 285], ['ipchun', 315], ['gyeongchip', 345], ['cheongmyeong', 15],
-  ['ipha', 45], ['mangjong', 75], ['haji', 105], ['ipchu', 135],
+  ['ipha', 45], ['mangjong', 75], ['soseo', 105], ['ipchu', 135],
   ['baengno', 165], ['hallo', 195], ['ipdong', 225], ['daeseol', 255],
 ];
 const EXPECTED_SOLAR_CASES = (() => {

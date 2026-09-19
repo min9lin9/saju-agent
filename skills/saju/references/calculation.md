@@ -23,10 +23,11 @@ Installed copy: `node <workspace>/skills/saju/scripts/saju.mjs --input <request.
 - Exit 2: empty stdout, one `{"error":{"code","path","message"}}` object on
   stderr. Covers every typed error: request validation, civil-time
   resolution, calendar conversion and computation errors.
-- Exit 1: untyped internal failure (missing dependency, missing or
-  unreadable rule-table file, bug). Empty stdout. A rule-table file that
-  reads but has invalid content is a typed `INVALID_RULE_TABLE` (exit 2),
-  not exit 1.
+- Exit 1: untyped internal failure (missing dependency, rule-table file
+  that is not parseable JSON, bug). Empty stdout. A missing or unreadable
+  rule-table file is typed — the fs error carries a string `.code` (e.g.
+  `ENOENT`) — so it exits 2, not 1. A rule-table file that parses but has
+  invalid content is a typed `INVALID_RULE_TABLE` (exit 2), not exit 1.
 - Unknown flags and unknown request fields are rejected, never ignored.
 - Requires Node.js and the pinned dependencies in `scripts/package.json`
   (`astronomy-engine` 2.1.19, `korean-lunar-calendar` 0.4.0). `install.sh`

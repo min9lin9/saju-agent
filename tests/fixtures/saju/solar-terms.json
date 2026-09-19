@@ -86,7 +86,7 @@
       "bracketSeconds": 60
     },
     {
-      "id": "ut-2024-haji",
+      "id": "ut-2024-soseo",
       "angle": 105,
       "year": 2024,
       "month": 7,
@@ -94,8 +94,8 @@
       "expectedJulianDay": 2460498.097275165,
       "toleranceSeconds": 120,
       "sourceIds": [
-        "ut-2024-haji-hourly",
-        "ut-2024-haji-minute"
+        "ut-2024-soseo-hourly",
+        "ut-2024-soseo-minute"
       ],
       "bracketSeconds": 60
     },
@@ -572,13 +572,13 @@
       "ephemerisSource": "DE441"
     },
     {
-      "id": "ut-2024-haji-hourly",
+      "id": "ut-2024-soseo-hourly",
       "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-07-01+00%3A00%27&STOP_TIME=%272024-07-11+00%3A00%27&STEP_SIZE=%271+h%27",
       "requestHeaders": {
         "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
         "Accept": "text/plain"
       },
-      "rawFile": "raw/horizons/ut-2024-haji-hourly.txt",
+      "rawFile": "raw/horizons/ut-2024-soseo-hourly.txt",
       "sha256": "1537cda016520622d0f1f2d38a2fd54218b740f05c6533f1083bbefb07a59bab",
       "retrievedAt": "2026-09-19T06:58:41.130Z",
       "center": "500@399",
@@ -589,13 +589,13 @@
       "ephemerisSource": "DE441"
     },
     {
-      "id": "ut-2024-haji-minute",
+      "id": "ut-2024-soseo-minute",
       "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Jul-06+14%3A00%3A00%27&STOP_TIME=%272024-Jul-06+15%3A00%3A00%27&STEP_SIZE=%271+m%27",
       "requestHeaders": {
         "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
         "Accept": "text/plain"
       },
-      "rawFile": "raw/horizons/ut-2024-haji-minute.txt",
+      "rawFile": "raw/horizons/ut-2024-soseo-minute.txt",
       "sha256": "8613a83b2023cca298744021dbf8fa2ef214ac94d7c7e25dcf38e80f2a371f9f",
       "retrievedAt": "2026-09-19T06:58:43.359Z",
       "center": "500@399",
