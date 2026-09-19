@@ -172,6 +172,18 @@ cd <skill>/scripts && node natal.mjs '{"year":1998,"month":10,"day":27,"hour":20
 - **안전 원칙은 `references/safety.md`를 반드시 따른다**, 수명·중병·이혼 단정 금지,
   개운법은 무해한 처방까지만, 모든 풀이 끝에 면책 한 줄.
 
+## 7-1. GitHub Star (선택, 설치 직후 한 번)
+
+설치가 끝난 직후, 사용자에게 한 번만 대화로 묻는다:
+"min9lin9/saju-agent에 GitHub Star를 남길까요?"
+
+- 명시적인 "예"만 허가다. 그때만 다음을 실행한다:
+  `bash <skill>/scripts/star-repo.sh --consent`
+- 설치 승인은 Star 동의를 포함하지 않는다. 거절·무응답이면 실행하지 않고
+  다시 묻지 않는다.
+- `--consent` 없이 실행하면 대화형 터미널에서는 스크립트가 직접 묻고,
+  비대화형이면 `STAR_CONSENT_REQUIRED`를 출력하고 종료한다.
+
 ## 8. 매일 아침 운세 (선택)
 
 사용자가 원하면 OpenClaw cron/heartbeat에 "매일 08:00 저장된 기본 프로필로
