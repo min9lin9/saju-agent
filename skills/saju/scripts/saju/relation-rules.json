@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "rulesetId": "kr-civil-midnight-v1",
+  "evidenceClass": "policy",
+  "note": "Runtime relation rule tables for saju/relations.mjs. Declared school-policy conventions transcribed from .omo/plans/deterministic-saju.md 'Calendar and rule policies'; identical to the independently authored tests/fixtures/saju/rules.json relation tables. Not astronomical evidence, not a claim of universal school consensus, and no favorable-effect/benefit inference is attached.",
+  "tables": {
+    "stemCombinations": [
+      {
+        "pair": [
+          "甲",
+          "己"
+        ],
+        "element": "土"
+      },
+      {
+        "pair": [
+          "乙",
+          "庚"
+        ],
+        "element": "金"
+      },
+      {
+        "pair": [
+          "丙",
+          "辛"
+        ],
+        "element": "水"
+      },
+      {
+        "pair": [
+          "丁",
+          "壬"
+        ],
+        "element": "木"
+      },
+      {
+        "pair": [
+          "戊",
+          "癸"
+        ],
+        "element": "火"
+      }
+    ],
+    "stemClashes": [
+      [
+        "甲",
+        "庚"
+      ],
+      [
+        "乙",
+        "辛"
+      ],
+      [
+        "丙",
+        "壬"
+      ],
+      [
+        "丁",
+        "癸"
+      ]
+    ],
+    "branchCombinations": {
+      "liuhe": [
+        {
+          "pair": [
+            "子",
+            "丑"
+          ],
+          "element": "土"
+        },
+        {
+          "pair": [
+            "寅",
+            "亥"
+          ],
+          "element": "木"
+        },
+        {
+          "pair": [
+            "卯",
+            "戌"
+          ],
+          "element": "火"
+        },
+        {
+          "pair": [
+            "辰",
+            "酉"
+          ],
+          "element": "金"
+        },
+        {
+          "pair": [
+            "巳",
+            "申"
+          ],
+          "element": "水"
+        },
+        {
+          "pair": [
+            "午",
+            "未"
+          ],
+          "element": "土"
+        }
+      ],
+      "sanhe": [
+        {
+          "triple": [
+            "申",
+            "子",
+            "辰"
+          ],
+          "element": "水"
+        },
+        {
+          "triple": [
+            "亥",
+            "卯",
+            "未"
+          ],
+          "element": "木"
+        },
+        {
+          "triple": [
+            "寅",
+            "午",
+            "戌"
+          ],
+          "element": "火"
+        },
+        {
+          "triple": [
+            "巳",
+            "酉",
+            "丑"
+          ],
+          "element": "金"
+        }
+      ],
+      "fanghe": [
+        {
+          "triple": [
+            "寅",
+            "卯",
+            "辰"
+          ],
+          "element": "木"
+        },
+        {
+          "triple": [
+            "巳",
+            "午",
+            "未"
+          ],
+          "element": "火"
+        },
+        {
+          "triple": [
+            "申",
+            "酉",
+            "戌"
+          ],
+          "element": "金"
+        },
+        {
+          "triple": [
+            "亥",
+            "子",
+            "丑"
+          ],
+          "element": "水"
+        }
+      ],
+      "partialSanheRule": "two-member subsets are distinct partial records; partial 三合 requires the middle cardinal branch 子/卯/午/酉, otherwise label arched_triad, not 半合"
+    },
+    "branchClashes": [
+      [
+        "子",
+        "午"
+      ],
+      [
+        "丑",
+        "未"
+      ],
+      [
+        "寅",
+        "申"
+      ],
+      [
+        "卯",
+        "酉"
+      ],
+      [
+        "辰",
+        "戌"
+      ],
+      [
+        "巳",
+        "亥"
+      ]
+    ],
+    "branchBreaks": [
+      [
+        "子",
+        "酉"
+      ],
+      [
+        "卯",
+        "午"
+      ],
+      [
+        "辰",
+        "丑"
+      ],
+      [
+        "戌",
+        "未"
+      ],
+      [
+        "寅",
+        "亥"
+      ],
+      [
+        "巳",
+        "申"
+      ]
+    ],
+    "branchHarms": [
+      [
+        "子",
+        "未"
+      ],
+      [
+        "丑",
+        "午"
+      ],
+      [
+        "寅",
+        "巳"
+      ],
+      [
+        "卯",
+        "辰"
+      ],
+      [
+        "申",
+        "亥"
+      ],
+      [
+        "酉",
+        "戌"
+      ]
+    ],
+    "punishments": {
+      "directedCycles": [
+        [
+          "寅",
+          "巳",
+          "申"
+        ],
+        [
+          "丑",
+          "戌",
+          "未"
+        ]
+      ],
+      "undirected": [
+        [
+          "子",
+          "卯"
+        ]
+      ],
+      "selfPunishmentBranches": [
+        "辰",
+        "午",
+        "酉",
+        "亥"
+      ],
+      "selfPunishmentRequires": "two distinct occurrences",
+      "recordIndependently": "present edges and complete triple"
+    },
+    "wonjin": [
+      [
+        "子",
+        "未"
+      ],
+      [
+        "丑",
+        "午"
+      ],
+      [
+        "寅",
+        "酉"
+      ],
+      [
+        "卯",
+        "申"
+      ],
+      [
+        "辰",
+        "亥"
+      ],
+      [
+        "巳",
+        "戌"
+      ]
+    ],
+    "gwimun": [
+      [
+        "子",
+        "酉"
+      ],
+      [
+        "丑",
+        "午"
+      ],
+      [
+        "寅",
+        "未"
+      ],
+      [
+        "卯",
+        "申"
+      ],
+      [
+        "辰",
+        "亥"
+      ],
+      [
+        "巳",
+        "戌"
+      ]
+    ],
+    "gongmangByDayXun": {
+      "甲子": [
+        "戌",
+        "亥"
+      ],
+      "甲戌": [
+        "申",
+        "酉"
+      ],
+      "甲申": [
+        "午",
+        "未"
+      ],
+      "甲午": [
+        "辰",
+        "巳"
+      ],
+      "甲辰": [
+        "寅",
+        "卯"
+      ],
+      "甲寅": [
+        "子",
+        "丑"
+      ]
+    }
+  }
+}
