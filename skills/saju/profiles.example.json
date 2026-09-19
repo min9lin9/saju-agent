@@ -9,8 +9,10 @@
       "birth_month": "10",
       "birth_day": "27",
       "birth_hour": "20",
+      "birth_time": "20:40:00",
+      "birth_timezone": "Asia/Seoul",
       "location": "서울",
-      "note": "양력 1998-10-27 저녁 8시(戌시)"
+      "note": "양력 1998-10-27 저녁 8시(戌시). birth_hour는 제공자용 근사값, birth_time/birth_timezone은 사용자가 알려준 정밀값. birth_hour를 birth_time으로 자동 변환하지 않는다"
     },
     "mom": {
       "name": "어머니",
@@ -21,7 +23,7 @@
       "birth_day": "12",
       "birth_hour": "",
       "location": "",
-      "note": "음력, 태어난 시간 모름"
+      "note": "음력, 태어난 시간 모름. birth_time 없으면 로컬 계산은 time:null"
     }
   }
 }
