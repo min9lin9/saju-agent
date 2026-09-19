@@ -1,0 +1,165 @@
+API VERSION: 1.2
+API SOURCE: NASA/JPL Horizons API
+
+
+
+*******************************************************************************
+Ephemeris / API_USER Sat Sep 19 00:00:13 2026 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Sun (10)                        {source: DE441}
+Center body name: Earth (399)                     {source: DE441}
+Center-site name: GEOCENTRIC
+*******************************************************************************
+Start time      : A.D. 2101-Jan-05 13:00:00.0000 TT      
+Stop  time      : A.D. 2101-Jan-05 14:00:00.0000 TT      
+Step-size       : 1 minutes
+*******************************************************************************
+Target pole/equ : IAU_SUN                         {East-longitude positive}
+Target radii    : 695700.0, 695700.0, 695700.0 km {Equator_a, b, pole_c}       
+Center geodetic : 0.0, 0.0, -6378.137             {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : ITRF93                          {East-longitude positive}
+Center radii    : 6378.137, 6378.137, 6356.752 km {Equator_a, b, pole_c}       
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: DE441}
+Rel. light bend : Sun                             {source: DE441}
+Rel. lght bnd GM: 1.3271E+11 km^3/s^2                                          
+Atmos refraction: NO (AIRLESS)
+RA format       : HMS
+Time format     : CAL 
+Calendar mode   : Gregorian
+EOP file        : eop.260918.p261215                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2026-SEP-18. PREDICTS-> 2026-DEC-14
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+ Date__(TT)__HR:MN:SS, , ,    ObsEcLon,   ObsEcLat,
+***************************************************
+$$SOE
+ 2101-Jan-05 13:00:00, , , 284.9929777,  0.0001660,
+ 2101-Jan-05 13:01:00, , , 284.9936855,  0.0001661,
+ 2101-Jan-05 13:02:00, , , 284.9943933,  0.0001661,
+ 2101-Jan-05 13:03:00, , , 284.9951012,  0.0001661,
+ 2101-Jan-05 13:04:00, , , 284.9958090,  0.0001661,
+ 2101-Jan-05 13:05:00, , , 284.9965169,  0.0001662,
+ 2101-Jan-05 13:06:00, , , 284.9972247,  0.0001662,
+ 2101-Jan-05 13:07:00, , , 284.9979326,  0.0001662,
+ 2101-Jan-05 13:08:00, , , 284.9986404,  0.0001662,
+ 2101-Jan-05 13:09:00, , , 284.9993482,  0.0001662,
+ 2101-Jan-05 13:10:00, , , 285.0000561,  0.0001663,
+ 2101-Jan-05 13:11:00, , , 285.0007639,  0.0001663,
+ 2101-Jan-05 13:12:00, , , 285.0014718,  0.0001663,
+ 2101-Jan-05 13:13:00, , , 285.0021796,  0.0001663,
+ 2101-Jan-05 13:14:00, , , 285.0028875,  0.0001664,
+ 2101-Jan-05 13:15:00, , , 285.0035953,  0.0001664,
+ 2101-Jan-05 13:16:00, , , 285.0043032,  0.0001664,
+ 2101-Jan-05 13:17:00, , , 285.0050110,  0.0001664,
+ 2101-Jan-05 13:18:00, , , 285.0057188,  0.0001665,
+ 2101-Jan-05 13:19:00, , , 285.0064267,  0.0001665,
+ 2101-Jan-05 13:20:00, , , 285.0071345,  0.0001665,
+ 2101-Jan-05 13:21:00, , , 285.0078424,  0.0001665,
+ 2101-Jan-05 13:22:00, , , 285.0085502,  0.0001665,
+ 2101-Jan-05 13:23:00, , , 285.0092581,  0.0001666,
+ 2101-Jan-05 13:24:00, , , 285.0099659,  0.0001666,
+ 2101-Jan-05 13:25:00, , , 285.0106737,  0.0001666,
+ 2101-Jan-05 13:26:00, , , 285.0113816,  0.0001666,
+ 2101-Jan-05 13:27:00, , , 285.0120894,  0.0001667,
+ 2101-Jan-05 13:28:00, , , 285.0127973,  0.0001667,
+ 2101-Jan-05 13:29:00, , , 285.0135051,  0.0001667,
+ 2101-Jan-05 13:30:00, , , 285.0142130,  0.0001667,
+ 2101-Jan-05 13:31:00, , , 285.0149208,  0.0001668,
+ 2101-Jan-05 13:32:00, , , 285.0156286,  0.0001668,
+ 2101-Jan-05 13:33:00, , , 285.0163365,  0.0001668,
+ 2101-Jan-05 13:34:00, , , 285.0170443,  0.0001668,
+ 2101-Jan-05 13:35:00, , , 285.0177522,  0.0001669,
+ 2101-Jan-05 13:36:00, , , 285.0184600,  0.0001669,
+ 2101-Jan-05 13:37:00, , , 285.0191679,  0.0001669,
+ 2101-Jan-05 13:38:00, , , 285.0198757,  0.0001669,
+ 2101-Jan-05 13:39:00, , , 285.0205835,  0.0001669,
+ 2101-Jan-05 13:40:00, , , 285.0212914,  0.0001670,
+ 2101-Jan-05 13:41:00, , , 285.0219992,  0.0001670,
+ 2101-Jan-05 13:42:00, , , 285.0227071,  0.0001670,
+ 2101-Jan-05 13:43:00, , , 285.0234149,  0.0001670,
+ 2101-Jan-05 13:44:00, , , 285.0241228,  0.0001671,
+ 2101-Jan-05 13:45:00, , , 285.0248306,  0.0001671,
+ 2101-Jan-05 13:46:00, , , 285.0255384,  0.0001671,
+ 2101-Jan-05 13:47:00, , , 285.0262463,  0.0001671,
+ 2101-Jan-05 13:48:00, , , 285.0269541,  0.0001672,
+ 2101-Jan-05 13:49:00, , , 285.0276620,  0.0001672,
+ 2101-Jan-05 13:50:00, , , 285.0283698,  0.0001672,
+ 2101-Jan-05 13:51:00, , , 285.0290776,  0.0001672,
+ 2101-Jan-05 13:52:00, , , 285.0297855,  0.0001673,
+ 2101-Jan-05 13:53:00, , , 285.0304933,  0.0001673,
+ 2101-Jan-05 13:54:00, , , 285.0312012,  0.0001673,
+ 2101-Jan-05 13:55:00, , , 285.0319090,  0.0001673,
+ 2101-Jan-05 13:56:00, , , 285.0326169,  0.0001673,
+ 2101-Jan-05 13:57:00, , , 285.0333247,  0.0001674,
+ 2101-Jan-05 13:58:00, , , 285.0340325,  0.0001674,
+ 2101-Jan-05 13:59:00, , , 285.0347404,  0.0001674,
+ 2101-Jan-05 14:00:00, , , 285.0354482,  0.0001674,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Terrestrial Time ("TT") output was requested. This continuous timescale
+is the relativistic proper time of a clock at rest on the Earth's geoid (at
+"mean sea level"), but defined for a specified gravitational time dilation,
+so a coordinate time. It is appropriate for observations and measurements
+from the surface of the Earth.
+
+  TT runs at a uniform rate of one SI second per second and is independent of
+irregularities in Earth's rotation. It is a theoretical ideal, approximated
+(with a constant offset of 32.184 seconds) by the measured International Atomic
+Time (TAI) after 1955.  TT is the relativistic successor to the now deprecated
+non-relativistic Ephemeris Time (ET).
+
+  The TT scale requested here is a time-scale conversion from internal
+Barycentric Dynamical Time (TDB) and differs periodically from TDB with an
+amplitude less than 2 ms for several thousand years centered on present.
+The time-scale conversion for Earth is used regardless of observer location
+within the solar system, although clock rates may differ due to the local
+gravity field.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date.
+ 
+CALENDAR SYSTEM
+
+  Calendar dates are given in the modern Gregorian system, extended prior to
+its 1582-Oct-15 adoption. The Gregorian calendar more closely corresponds to
+physical Earth seasons and orbital motion, but can differ by up to 10 days with
+historical records made under the prior Julian calendar, more if the Julian
+calendar was extended prior to its 45-Jan-1 BC adoption to label the historical
+event. Select "mixed" calendar mode if correlation with historical dates prior
+to A.D. 1582 is important.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+ 'ObsEcLon,   ObsEcLat,' =
+   Observer-centered IAU76/80 ecliptic-of-date longitude and latitude of the
+target centers' apparent position, with light-time, gravitational deflection of
+light, and stellar aberrations.  Units: DEGREES
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/horizons_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Inquiries   : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************

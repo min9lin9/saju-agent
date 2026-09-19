@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "birth": {
+    "calendar": "solar",
+    "date": "1899-12-31",
+    "time": "12:00:00",
+    "timezone": "Asia/Seoul",
+    "gender": "male"
+  },
+  "queries": {
+    "majorCycles": 0,
+    "transits": []
+  }
+}

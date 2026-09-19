@@ -1,0 +1,162 @@
+API VERSION: 1.2
+API SOURCE: NASA/JPL Horizons API
+
+
+
+*******************************************************************************
+Ephemeris / API_USER Fri Sep 18 23:58:57 2026 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Sun (10)                        {source: DE441}
+Center body name: Earth (399)                     {source: DE441}
+Center-site name: GEOCENTRIC
+*******************************************************************************
+Start time      : A.D. 2024-Oct-07 18:00:00.0000 UT      
+Stop  time      : A.D. 2024-Oct-07 19:00:00.0000 UT      
+Step-size       : 1 minutes
+*******************************************************************************
+Target pole/equ : IAU_SUN                         {East-longitude positive}
+Target radii    : 695700.0, 695700.0, 695700.0 km {Equator_a, b, pole_c}       
+Center geodetic : 0.0, 0.0, -6378.137             {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : ITRF93                          {East-longitude positive}
+Center radii    : 6378.137, 6378.137, 6356.752 km {Equator_a, b, pole_c}       
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: DE441}
+Rel. light bend : Sun                             {source: DE441}
+Rel. lght bnd GM: 1.3271E+11 km^3/s^2                                          
+Atmos refraction: NO (AIRLESS)
+RA format       : HMS
+Time format     : CAL 
+Calendar mode   : Gregorian
+EOP file        : eop.260918.p261215                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2026-SEP-18. PREDICTS-> 2026-DEC-14
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+ Date__(UT)__HR:MN:SS, , ,    ObsEcLon,   ObsEcLat,
+***************************************************
+$$SOE
+ 2024-Oct-07 18:00:00, , , 194.9588847, -0.0001184,
+ 2024-Oct-07 18:01:00, , , 194.9595702, -0.0001184,
+ 2024-Oct-07 18:02:00, , , 194.9602558, -0.0001185,
+ 2024-Oct-07 18:03:00, , , 194.9609413, -0.0001185,
+ 2024-Oct-07 18:04:00, , , 194.9616268, -0.0001185,
+ 2024-Oct-07 18:05:00, , , 194.9623124, -0.0001185,
+ 2024-Oct-07 18:06:00, , , 194.9629979, -0.0001185,
+ 2024-Oct-07 18:07:00, , , 194.9636835, -0.0001185,
+ 2024-Oct-07 18:08:00, , , 194.9643690, -0.0001185,
+ 2024-Oct-07 18:09:00, , , 194.9650545, -0.0001185,
+ 2024-Oct-07 18:10:00, , , 194.9657401, -0.0001185,
+ 2024-Oct-07 18:11:00, , , 194.9664256, -0.0001185,
+ 2024-Oct-07 18:12:00, , , 194.9671112, -0.0001186,
+ 2024-Oct-07 18:13:00, , , 194.9677967, -0.0001186,
+ 2024-Oct-07 18:14:00, , , 194.9684822, -0.0001186,
+ 2024-Oct-07 18:15:00, , , 194.9691678, -0.0001186,
+ 2024-Oct-07 18:16:00, , , 194.9698533, -0.0001186,
+ 2024-Oct-07 18:17:00, , , 194.9705389, -0.0001186,
+ 2024-Oct-07 18:18:00, , , 194.9712244, -0.0001186,
+ 2024-Oct-07 18:19:00, , , 194.9719100, -0.0001186,
+ 2024-Oct-07 18:20:00, , , 194.9725955, -0.0001186,
+ 2024-Oct-07 18:21:00, , , 194.9732811, -0.0001187,
+ 2024-Oct-07 18:22:00, , , 194.9739666, -0.0001187,
+ 2024-Oct-07 18:23:00, , , 194.9746521, -0.0001187,
+ 2024-Oct-07 18:24:00, , , 194.9753377, -0.0001187,
+ 2024-Oct-07 18:25:00, , , 194.9760232, -0.0001187,
+ 2024-Oct-07 18:26:00, , , 194.9767088, -0.0001187,
+ 2024-Oct-07 18:27:00, , , 194.9773943, -0.0001187,
+ 2024-Oct-07 18:28:00, , , 194.9780799, -0.0001187,
+ 2024-Oct-07 18:29:00, , , 194.9787654, -0.0001187,
+ 2024-Oct-07 18:30:00, , , 194.9794510, -0.0001187,
+ 2024-Oct-07 18:31:00, , , 194.9801365, -0.0001188,
+ 2024-Oct-07 18:32:00, , , 194.9808221, -0.0001188,
+ 2024-Oct-07 18:33:00, , , 194.9815076, -0.0001188,
+ 2024-Oct-07 18:34:00, , , 194.9821932, -0.0001188,
+ 2024-Oct-07 18:35:00, , , 194.9828787, -0.0001188,
+ 2024-Oct-07 18:36:00, , , 194.9835643, -0.0001188,
+ 2024-Oct-07 18:37:00, , , 194.9842498, -0.0001188,
+ 2024-Oct-07 18:38:00, , , 194.9849353, -0.0001188,
+ 2024-Oct-07 18:39:00, , , 194.9856209, -0.0001188,
+ 2024-Oct-07 18:40:00, , , 194.9863064, -0.0001189,
+ 2024-Oct-07 18:41:00, , , 194.9869920, -0.0001189,
+ 2024-Oct-07 18:42:00, , , 194.9876775, -0.0001189,
+ 2024-Oct-07 18:43:00, , , 194.9883631, -0.0001189,
+ 2024-Oct-07 18:44:00, , , 194.9890486, -0.0001189,
+ 2024-Oct-07 18:45:00, , , 194.9897342, -0.0001189,
+ 2024-Oct-07 18:46:00, , , 194.9904197, -0.0001189,
+ 2024-Oct-07 18:47:00, , , 194.9911053, -0.0001189,
+ 2024-Oct-07 18:48:00, , , 194.9917908, -0.0001189,
+ 2024-Oct-07 18:49:00, , , 194.9924764, -0.0001189,
+ 2024-Oct-07 18:50:00, , , 194.9931620, -0.0001190,
+ 2024-Oct-07 18:51:00, , , 194.9938475, -0.0001190,
+ 2024-Oct-07 18:52:00, , , 194.9945331, -0.0001190,
+ 2024-Oct-07 18:53:00, , , 194.9952186, -0.0001190,
+ 2024-Oct-07 18:54:00, , , 194.9959042, -0.0001190,
+ 2024-Oct-07 18:55:00, , , 194.9965897, -0.0001190,
+ 2024-Oct-07 18:56:00, , , 194.9972753, -0.0001190,
+ 2024-Oct-07 18:57:00, , , 194.9979608, -0.0001190,
+ 2024-Oct-07 18:58:00, , , 194.9986464, -0.0001190,
+ 2024-Oct-07 18:59:00, , , 194.9993319, -0.0001191,
+ 2024-Oct-07 19:00:00, , , 195.0000175, -0.0001191,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Times PRIOR to 1962 are UT1, a mean-solar time closely related to the
+prior but now-deprecated GMT. Times AFTER 1962 are in UTC, the current
+civil or "wall-clock" time-scale. UTC is kept within 0.9 seconds of UT1
+using integer leap-seconds for 1972 and later years.
+
+  Conversion from the internal Barycentric Dynamical Time (TDB) of solar
+system dynamics to the non-uniform civil UT time-scale requested for output
+has not been determined for UTC times after the next July or January 1st.
+Therefore, the last known leap-second is used as a constant over future
+intervals.
+
+  Time tags refer to the UT time-scale conversion from TDB on Earth
+regardless of observer location within the solar system, although clock
+rates may differ due to the local gravity field and no analog to "UT"
+may be defined for that location.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date.
+ 
+CALENDAR SYSTEM
+
+  Calendar dates are given in the modern Gregorian system, extended prior to
+its 1582-Oct-15 adoption. The Gregorian calendar more closely corresponds to
+physical Earth seasons and orbital motion, but can differ by up to 10 days with
+historical records made under the prior Julian calendar, more if the Julian
+calendar was extended prior to its 45-Jan-1 BC adoption to label the historical
+event. Select "mixed" calendar mode if correlation with historical dates prior
+to A.D. 1582 is important.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+ 'ObsEcLon,   ObsEcLat,' =
+   Observer-centered IAU76/80 ecliptic-of-date longitude and latitude of the
+target centers' apparent position, with light-time, gravitational deflection of
+light, and stellar aberrations.  Units: DEGREES
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/horizons_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Inquiries   : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************
