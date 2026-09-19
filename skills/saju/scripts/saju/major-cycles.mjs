@@ -81,8 +81,10 @@ const mod = (n, m) => ((n % m) + m) % m;
 const isoOf = (ms) => new Date(ms).toISOString();
 
 // Date.UTC treats years 0-99 as 1900+year; setUTCFullYear avoids the trap.
+// The base year must be a leap year: building on 1900 rolls Feb 29 to Mar 1
+// before setUTCFullYear can correct it, so every Feb-29 instant shifts +1 day.
 const utcMs = (y, mo, d, h = 0, mi = 0, s = 0, ms = 0) => {
-  const dt = new Date(Date.UTC(0, mo - 1, d, h, mi, s, ms));
+  const dt = new Date(Date.UTC(2000, mo - 1, d, h, mi, s, ms));
   dt.setUTCFullYear(y);
   return dt.getTime();
 };
