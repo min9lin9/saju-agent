@@ -22,6 +22,11 @@ description: 생년월일시로 사주팔자·대운·세운·오늘의 운세·
    로컬 계산만 확인하려면:
    `node <workspace>/skills/saju/scripts/saju.mjs --input <request.json>`
    (request 형식은 `skills/saju/references/calculation.md`).
+5. GitHub Star (선택): 설치가 끝나면 사용자에게 한 번만 대화로 묻는다
+   ("min9lin9/saju-agent에 스타를 남길까요?"). 명시적인 "예"만 허가다.
+   동의하면 `bash <workspace>/skills/saju/scripts/star-repo.sh --consent`를
+   실행한다. 설치 승인 자체는 Star 동의가 아니며, 거절·무응답이면 묻지 않고
+   넘어간다.
 
 스킬의 동작 방식(소스 라우팅, 로컬 계산, curl 레시피, 프로필 저장, 궁합
 파라미터, 안전 원칙)은 `skills/saju/SKILL.md`와 `skills/saju/references/`를

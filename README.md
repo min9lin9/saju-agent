@@ -14,6 +14,7 @@ https://github.com/min9lin9/saju-agent
 이 저장소의 README와 SKILL.md를 읽고 saju 스킬을 설치해줘.
 install.sh를 실행하고, openclaw skills list에 saju가 뜨는지 확인해.
 안 뜨면 /new나 gateway 재시작이 필요한지 알려줘.
+설치가 끝나면 GitHub Star를 남길지 한 번만 물어봐줘.
 ```
 
 ## 수동 설치
@@ -28,6 +29,10 @@ OPENCLAW_WORKSPACE=/path ./install.sh   # 다른 워크스페이스에 설치
 로컬 계산(`saju.mjs`)과 별자리(`natal.mjs`)는 Node.js와 `scripts/package.json`의
 고정 의존성(`astronomy-engine` 2.1.19, `korean-lunar-calendar` 0.4.0)이 필요하다.
 install.sh가 설치한다. node/npm이 없으면 신한라이프 운세·궁합(curl)만 동작한다.
+
+설치가 끝나면 에이전트가 GitHub Star를 남길지 한 번만 묻는다. 명시적인
+"예"만 `scripts/star-repo.sh --consent`를 실행한다. 설치 승인은 Star
+동의를 포함하지 않으며, 거절하면 아무 일도 일어나지 않는다.
 
 ## 뭘 해주나
 

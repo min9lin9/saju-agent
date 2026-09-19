@@ -130,3 +130,16 @@ cat <<'EOF'
   "나랑 1999년 3월 15일생 여자 궁합 봐줘"
   "서울에서 태어난 내 별자리도 봐줘"
 EOF
+
+# --- optional GitHub Star ----------------------------------------------------
+# Runs once, only after a successful install. The helper decides by terminal
+# state: interactive run → one [y/N] prompt; piped/agent run → it prints
+# STAR_CONSENT_REQUIRED and exits 0 without waiting. Its exit status never
+# affects the install result.
+echo "[saju-agent] optional: GitHub Star for min9lin9/saju-agent"
+STAR_RC=0
+bash "$DEST/scripts/star-repo.sh" || STAR_RC=$?
+if [ "$STAR_RC" -ne 0 ]; then
+  echo "[saju-agent] star helper exited $STAR_RC — install result unaffected"
+fi
+exit 0
