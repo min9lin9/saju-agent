@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "kasi-solc-2000-01-07",
+      "solar": { "year": 2000, "month": 1, "day": 7 },
+      "lunar": { "year": 1999, "month": 12, "day": 1, "leapMonth": false },
+      "dayGanZhi": "甲子",
+      "sourceId": "kasi-solc-2000-01-07"
+    },
+    {
+      "id": "kasi-solc-1998-10-27",
+      "solar": { "year": 1998, "month": 10, "day": 27 },
+      "lunar": { "year": 1998, "month": 9, "day": 8, "leapMonth": false },
+      "dayGanZhi": "丁未",
+      "sourceId": "kasi-solc-1998-10-27"
+    },
+    {
+      "id": "kasi-solc-2017-06-24",
+      "solar": { "year": 2017, "month": 6, "day": 24 },
+      "lunar": { "year": 2017, "month": 5, "day": 1, "leapMonth": true },
+      "dayGanZhi": "壬午",
+      "sourceId": "kasi-solc-2017-06-24"
+    }
+  ],
+  "sources": [
+    {
+      "id": "kasi-solc-2000-01-07",
+      "url": "https://astro.kasi.re.kr/life/solc?yyyy=2000&mm=01&dd=07",
+      "requestHeaders": { "User-Agent": "Mozilla/5.0" },
+      "rawFile": "raw/kasi/solc-2000-01-07.json",
+      "sha256": "6a836e00cc99ef0f6823aa4e435b2c42f4a6da0408351b55a01a505fe9f62d8a",
+      "retrievedAt": "2026-09-19T06:46:49Z"
+    },
+    {
+      "id": "kasi-solc-1998-10-27",
+      "url": "https://astro.kasi.re.kr/life/solc?yyyy=1998&mm=10&dd=27",
+      "requestHeaders": { "User-Agent": "Mozilla/5.0" },
+      "rawFile": "raw/kasi/solc-1998-10-27.json",
+      "sha256": "d6a7f0ddf4c1d5f7ab24b06ba54c988e3c85e4a6eb4706ae0a241759d35acd0c",
+      "retrievedAt": "2026-09-19T06:46:49Z"
+    },
+    {
+      "id": "kasi-solc-2017-06-24",
+      "url": "https://astro.kasi.re.kr/life/solc?yyyy=2017&mm=06&dd=24",
+      "requestHeaders": { "User-Agent": "Mozilla/5.0" },
+      "rawFile": "raw/kasi/solc-2017-06-24.json",
+      "sha256": "cba72951080fd105872be0aba131add0aa8ec7487fbd6e48b154ddb56b506613",
+      "retrievedAt": "2026-09-19T06:46:49Z"
+    }
+  ]
+}

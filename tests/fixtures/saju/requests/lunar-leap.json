@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "birth": {
+    "calendar": "korean_lunar",
+    "date": "2017-05-01",
+    "leapMonth": true,
+    "time": "12:00:00",
+    "timezone": "Asia/Seoul",
+    "gender": "female"
+  },
+  "queries": {
+    "majorCycles": 0,
+    "transits": []
+  }
+}

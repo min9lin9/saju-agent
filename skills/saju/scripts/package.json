@@ -1,0 +1,9 @@
+{
+  "name": "saju-natal",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "astronomy-engine": "2.1.19",
+    "korean-lunar-calendar": "0.4.0"
+  }
+}

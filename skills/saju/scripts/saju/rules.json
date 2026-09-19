@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "rulesetId": "kr-civil-midnight-v1",
+  "evidenceClass": "policy",
+  "note": "Runtime natal-derivation rule tables for saju/natal.mjs. Declared school-policy conventions transcribed from .omo/plans/deterministic-saju.md 'Calendar and rule policies'; the tables object mirrors the independently authored tests/fixtures/saju/rules.json natal tables verbatim (parity asserted by test). labels.* attach canonical machine ids plus Hanzi and Korean labels. Not astronomical evidence, not a claim of universal school consensus; no useful-element/strength inference is attached.",
+  "labels": {
+    "stems": [
+      {
+        "id": "gap",
+        "hanzi": "甲",
+        "korean": "갑",
+        "element": "wood",
+        "polarity": "yang"
+      },
+      {
+        "id": "eul",
+        "hanzi": "乙",
+        "korean": "을",
+        "element": "wood",
+        "polarity": "yin"
+      },
+      {
+        "id": "byeong",
+        "hanzi": "丙",
+        "korean": "병",
+        "element": "fire",
+        "polarity": "yang"
+      },
+      {
+        "id": "jeong",
+        "hanzi": "丁",
+        "korean": "정",
+        "element": "fire",
+        "polarity": "yin"
+      },
+      {
+        "id": "mu",
+        "hanzi": "戊",
+        "korean": "무",
+        "element": "earth",
+        "polarity": "yang"
+      },
+      {
+        "id": "gi",
+        "hanzi": "己",
+        "korean": "기",
+        "element": "earth",
+        "polarity": "yin"
+      },
+      {
+        "id": "gyeong",
+        "hanzi": "庚",
+        "korean": "경",
+        "element": "metal",
+        "polarity": "yang"
+      },
+      {
+        "id": "sin",
+        "hanzi": "辛",
+        "korean": "신",
+        "element": "metal",
+        "polarity": "yin"
+      },
+      {
+        "id": "im",
+        "hanzi": "壬",
+        "korean": "임",
+        "element": "water",
+        "polarity": "yang"
+      },
+      {
+        "id": "gye",
+        "hanzi": "癸",
+        "korean": "계",
+        "element": "water",
+        "polarity": "yin"
+      }
+    ],
+    "branches": [
+      {
+        "id": "ja",
+        "hanzi": "子",
+        "korean": "자",
+        "element": "water",
+        "polarity": "yang"
+      },
+      {
+        "id": "chuk",
+        "hanzi": "丑",
+        "korean": "축",
+        "element": "earth",
+        "polarity": "yin"
+      },
+      {
+        "id": "in",
+        "hanzi": "寅",
+        "korean": "인",
+        "element": "wood",
+        "polarity": "yang"
+      },
+      {
+        "id": "myo",
+        "hanzi": "卯",
+        "korean": "묘",
+        "element": "wood",
+        "polarity": "yin"
+      },
+      {
+        "id": "jin",
+        "hanzi": "辰",
+        "korean": "진",
+        "element": "earth",
+        "polarity": "yang"
+      },
+      {
+        "id": "sa",
+        "hanzi": "巳",
+        "korean": "사",
+        "element": "fire",
+        "polarity": "yin"
+      },
+      {
+        "id": "o",
+        "hanzi": "午",
+        "korean": "오",
+        "element": "fire",
+        "polarity": "yang"
+      },
+      {
+        "id": "mi",
+        "hanzi": "未",
+        "korean": "미",
+        "element": "earth",
+        "polarity": "yin"
+      },
+      {
+        "id": "sin",
+        "hanzi": "申",
+        "korean": "신",
+        "element": "metal",
+        "polarity": "yang"
+      },
+      {
+        "id": "yu",
+        "hanzi": "酉",
+        "korean": "유",
+        "element": "metal",
+        "polarity": "yin"
+      },
+      {
+        "id": "sul",
+        "hanzi": "戌",
+        "korean": "술",
+        "element": "earth",
+        "polarity": "yang"
+      },
+      {
+        "id": "hae",
+        "hanzi": "亥",
+        "korean": "해",
+        "element": "water",
+        "polarity": "yin"
+      }
+    ],
+    "elements": [
+      {
+        "id": "wood",
+        "hanzi": "木",
+        "korean": "목"
+      },
+      {
+        "id": "fire",
+        "hanzi": "火",
+        "korean": "화"
+      },
+      {
+        "id": "earth",
+        "hanzi": "土",
+        "korean": "토"
+      },
+      {
+        "id": "metal",
+        "hanzi": "金",
+        "korean": "금"
+      },
+      {
+        "id": "water",
+        "hanzi": "水",
+        "korean": "수"
+      }
+    ],
+    "tenGods": [
+      {
+        "id": "bigeon",
+        "hanzi": "比肩",
+        "korean": "비견"
+      },
+      {
+        "id": "geopjae",
+        "hanzi": "劫財",
+        "korean": "겁재"
+      },
+      {
+        "id": "siksin",
+        "hanzi": "食神",
+        "korean": "식신"
+      },
+      {
+        "id": "sanggwan",
+        "hanzi": "傷官",
+        "korean": "상관"
+      },
+      {
+        "id": "pyeonjae",
+        "hanzi": "偏財",
+        "korean": "편재"
+      },
+      {
+        "id": "jeongjae",
+        "hanzi": "正財",
+        "korean": "정재"
+      },
+      {
+        "id": "pyeongwan",
+        "hanzi": "偏官",
+        "korean": "편관"
+      },
+      {
+        "id": "jeonggwan",
+        "hanzi": "正官",
+        "korean": "정관"
+      },
+      {
+        "id": "pyeonin",
+        "hanzi": "偏印",
+        "korean": "편인"
+      },
+      {
+        "id": "jeongin",
+        "hanzi": "正印",
+        "korean": "정인"
+      },
+      {
+        "id": "ilju",
+        "hanzi": "日主",
+        "korean": "일주"
+      }
+    ],
+    "twelveStages": [
+      {
+        "id": "jangseng",
+        "hanzi": "長生",
+        "korean": "장생"
+      },
+      {
+        "id": "mokyok",
+        "hanzi": "沐浴",
+        "korean": "목욕"
+      },
+      {
+        "id": "gwandae",
+        "hanzi": "冠帶",
+        "korean": "관대"
+      },
+      {
+        "id": "geonrok",
+        "hanzi": "建祿",
+        "korean": "건록"
+      },
+      {
+        "id": "jewang",
+        "hanzi": "帝旺",
+        "korean": "제왕"
+      },
+      {
+        "id": "soe",
+        "hanzi": "衰",
+        "korean": "쇠"
+      },
+      {
+        "id": "byeong",
+        "hanzi": "病",
+        "korean": "병"
+      },
+      {
+        "id": "sa",
+        "hanzi": "死",
+        "korean": "사"
+      },
+      {
+        "id": "myo",
+        "hanzi": "墓",
+        "korean": "묘"
+      },
+      {
+        "id": "jeol",
+        "hanzi": "絕",
+        "korean": "절"
+      },
+      {
+        "id": "tae",
+        "hanzi": "胎",
+        "korean": "태"
+      },
+      {
+        "id": "yang",
+        "hanzi": "養",
+        "korean": "양"
+      }
+    ]
+  },
+  "tables": {
+    "dayCycleAnchor": {
+      "solarDate": "2000-01-07",
+      "dayGanZhi": "甲子",
+      "dayNumbering": "integer proleptic-Gregorian day numbers",
+      "rollover": "civil-time midnight"
+    },
+    "periodBoundaries": {
+      "yearBoundary": {
+        "event": "ipchun",
+        "sunLongitudeDeg": 315
+      },
+      "monthJieLongitudesDeg": [
+        315,
+        345,
+        15,
+        45,
+        75,
+        105,
+        135,
+        165,
+        195,
+        225,
+        255,
+        285
+      ],
+      "equalityBelongsTo": "new period",
+      "forbidden": "no lunar-month or January-1 substitution"
+    },
+    "yearPillar": {
+      "stemBranchFrom": "Ipchun-adjusted year minus 4",
+      "firstInMonthStemIndex": "(2*(yearStemIndex%5)+2)%10",
+      "advance": "monthly"
+    },
+    "hourPillar": {
+      "branchIndex": "floor((civilHour+1)/2) modulo 12",
+      "ziStartsAtCivilHour": 23,
+      "dayStemFollows": "midnight",
+      "stemIndex": "(2*dayStemIndex+hourBranchIndex)%10"
+    },
+    "hiddenStems": {
+      "weightsId": "hidden-602020-7030-v1",
+      "weights": {
+        "single": 1,
+        "triple": [
+          0.6,
+          0.2,
+          0.2
+        ],
+        "double": [
+          0.7,
+          0.3
+        ]
+      },
+      "doubleAppliesTo": [
+        "午",
+        "亥"
+      ],
+      "internalRepresentation": "integer tenths",
+      "rankOrder": {
+        "子": [
+          "癸"
+        ],
+        "丑": [
+          "己",
+          "癸",
+          "辛"
+        ],
+        "寅": [
+          "甲",
+          "丙",
+          "戊"
+        ],
+        "卯": [
+          "乙"
+        ],
+        "辰": [
+          "戊",
+          "乙",
+          "癸"
+        ],
+        "巳": [
+          "丙",
+          "戊",
+          "庚"
+        ],
+        "午": [
+          "丁",
+          "己"
+        ],
+        "未": [
+          "己",
+          "丁",
+          "乙"
+        ],
+        "申": [
+          "庚",
+          "壬",
+          "戊"
+        ],
+        "酉": [
+          "辛"
+        ],
+        "戌": [
+          "戊",
+          "辛",
+          "丁"
+        ],
+        "亥": [
+          "壬",
+          "甲"
+        ]
+      }
+    },
+    "tenGods": {
+      "relativeTo": "day stem element generation/control and polarity",
+      "sameElement": {
+        "samePolarity": "比肩",
+        "oppositePolarity": "劫財"
+      },
+      "generated": {
+        "samePolarity": "食神",
+        "oppositePolarity": "傷官"
+      },
+      "controlled": {
+        "samePolarity": "偏財",
+        "oppositePolarity": "正財"
+      },
+      "controlling": {
+        "samePolarity": "偏官",
+        "oppositePolarity": "正官"
+      },
+      "generating": {
+        "samePolarity": "偏印",
+        "oppositePolarity": "正印"
+      },
+      "dayStemLabel": "日主",
+      "branchTenGodUses": "main hidden stem"
+    },
+    "twelveStages": {
+      "order": [
+        "長生",
+        "沐浴",
+        "冠帶",
+        "建祿",
+        "帝旺",
+        "衰",
+        "病",
+        "死",
+        "墓",
+        "絕",
+        "胎",
+        "養"
+      ],
+      "startsAndDirections": {
+        "甲": {
+          "start": "亥",
+          "direction": "+"
+        },
+        "乙": {
+          "start": "午",
+          "direction": "-"
+        },
+        "丙": {
+          "start": "寅",
+          "direction": "+"
+        },
+        "戊": {
+          "start": "寅",
+          "direction": "+"
+        },
+        "丁": {
+          "start": "酉",
+          "direction": "-"
+        },
+        "己": {
+          "start": "酉",
+          "direction": "-"
+        },
+        "庚": {
+          "start": "巳",
+          "direction": "+"
+        },
+        "辛": {
+          "start": "子",
+          "direction": "-"
+        },
+        "壬": {
+          "start": "申",
+          "direction": "+"
+        },
+        "癸": {
+          "start": "卯",
+          "direction": "-"
+        }
+      }
+    },
+    "counts": {
+      "categories": [
+        "visible stems",
+        "visible branches",
+        "combined surface",
+        "stems+weighted-hidden expansion"
+      ],
+      "totalUnitsComplete": 8,
+      "totalUnitsWithoutHour": 6
+    }
+  }
+}
