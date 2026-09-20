@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "birth": {
+    "calendar": "solar",
+    "date": "1998-10-27",
+    "time": "20:40:00",
+    "timezone": "Asia/Seoul",
+    "utcOffset": "+09:00",
+    "gender": "male"
+  },
+  "queries": {
+    "majorCycles": 0,
+    "transits": [
+      "2026-09-17T12:00:00+09:00",
+      "2027-01-01T00:00:00Z",
+      "2026-09-17T12:00:00+09:00"
+    ]
+  }
+}

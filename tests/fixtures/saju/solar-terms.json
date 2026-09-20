@@ -1,0 +1,1255 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "ut-2024-sohan",
+      "angle": 285,
+      "year": 2024,
+      "month": 1,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460315.36763471,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-sohan-hourly",
+        "ut-2024-sohan-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-ipchun",
+      "angle": 315,
+      "year": 2024,
+      "month": 2,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460344.85218399,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-ipchun-hourly",
+        "ut-2024-ipchun-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-gyeongchip",
+      "angle": 345,
+      "year": 2024,
+      "month": 3,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460374.599158044,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-gyeongchip-hourly",
+        "ut-2024-gyeongchip-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-cheongmyeong",
+      "angle": 15,
+      "year": 2024,
+      "month": 4,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460404.79327354,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-cheongmyeong-hourly",
+        "ut-2024-cheongmyeong-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-ipha",
+      "angle": 45,
+      "year": 2024,
+      "month": 5,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460435.507016262,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-ipha-hourly",
+        "ut-2024-ipha-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-mangjong",
+      "angle": 75,
+      "year": 2024,
+      "month": 6,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460466.673551283,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-mangjong-hourly",
+        "ut-2024-mangjong-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-soseo",
+      "angle": 105,
+      "year": 2024,
+      "month": 7,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460498.097275165,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-soseo-hourly",
+        "ut-2024-soseo-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-ipchu",
+      "angle": 135,
+      "year": 2024,
+      "month": 8,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460529.506453868,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-ipchu-hourly",
+        "ut-2024-ipchu-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-baengno",
+      "angle": 165,
+      "year": 2024,
+      "month": 9,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460560.632893343,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-baengno-hourly",
+        "ut-2024-baengno-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-hallo",
+      "angle": 195,
+      "year": 2024,
+      "month": 10,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460591.291648941,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-hallo-hourly",
+        "ut-2024-hallo-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-ipdong",
+      "angle": 225,
+      "year": 2024,
+      "month": 11,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460621.430621114,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-ipdong-hourly",
+        "ut-2024-ipdong-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "ut-2024-daeseol",
+      "angle": 255,
+      "year": 2024,
+      "month": 12,
+      "timeScale": "UT",
+      "expectedJulianDay": 2460651.136848694,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "ut-2024-daeseol-hourly",
+        "ut-2024-daeseol-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-1900-ipchun",
+      "angle": 315,
+      "year": 1900,
+      "month": 2,
+      "timeScale": "TT",
+      "expectedJulianDay": 2415054.744136471,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-1900-ipchun-hourly",
+        "tt-1900-ipchun-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-1900-daeseol",
+      "angle": 255,
+      "year": 1900,
+      "month": 12,
+      "timeScale": "TT",
+      "expectedJulianDay": 2415361.038829025,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-1900-daeseol-hourly",
+        "tt-1900-daeseol-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-1954-ipchun",
+      "angle": 315,
+      "year": 1954,
+      "month": 2,
+      "timeScale": "TT",
+      "expectedJulianDay": 2434777.855022793,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-1954-ipchun-hourly",
+        "tt-1954-ipchun-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-1954-daeseol",
+      "angle": 255,
+      "year": 1954,
+      "month": 12,
+      "timeScale": "TT",
+      "expectedJulianDay": 2435084.14516381,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-1954-daeseol-hourly",
+        "tt-1954-daeseol-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-1988-ipchun",
+      "angle": 315,
+      "year": 1988,
+      "month": 2,
+      "timeScale": "TT",
+      "expectedJulianDay": 2447196.113730271,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-1988-ipchun-hourly",
+        "tt-1988-ipchun-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-1988-daeseol",
+      "angle": 255,
+      "year": 1988,
+      "month": 12,
+      "timeScale": "TT",
+      "expectedJulianDay": 2447502.399600306,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-1988-daeseol-hourly",
+        "tt-1988-daeseol-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-2000-ipchun",
+      "angle": 315,
+      "year": 2000,
+      "month": 2,
+      "timeScale": "TT",
+      "expectedJulianDay": 2451579.028796428,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-2000-ipchun-hourly",
+        "tt-2000-ipchun-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-2000-daeseol",
+      "angle": 255,
+      "year": 2000,
+      "month": 12,
+      "timeScale": "TT",
+      "expectedJulianDay": 2451885.318135638,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-2000-daeseol-hourly",
+        "tt-2000-daeseol-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-2050-ipchun",
+      "angle": 315,
+      "year": 2050,
+      "month": 2,
+      "timeScale": "TT",
+      "expectedJulianDay": 2469841.156298617,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-2050-ipchun-hourly",
+        "tt-2050-ipchun-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-2050-daeseol",
+      "angle": 255,
+      "year": 2050,
+      "month": 12,
+      "timeScale": "TT",
+      "expectedJulianDay": 2470147.446608846,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-2050-daeseol-hourly",
+        "tt-2050-daeseol-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-2100-ipchun",
+      "angle": 315,
+      "year": 2100,
+      "month": 2,
+      "timeScale": "TT",
+      "expectedJulianDay": 2488103.293966207,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-2100-ipchun-hourly",
+        "tt-2100-ipchun-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-2100-daeseol",
+      "angle": 255,
+      "year": 2100,
+      "month": 12,
+      "timeScale": "TT",
+      "expectedJulianDay": 2488409.571648379,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-2100-daeseol-hourly",
+        "tt-2100-daeseol-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-1899-daeseol",
+      "angle": 255,
+      "year": 1899,
+      "month": 12,
+      "timeScale": "TT",
+      "expectedJulianDay": 2414995.794861387,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-1899-daeseol-hourly",
+        "tt-1899-daeseol-minute"
+      ],
+      "bracketSeconds": 60
+    },
+    {
+      "id": "tt-2101-sohan",
+      "angle": 285,
+      "year": 2101,
+      "month": 1,
+      "timeScale": "TT",
+      "expectedJulianDay": 2488439.048556077,
+      "toleranceSeconds": 120,
+      "sourceIds": [
+        "tt-2101-sohan-hourly",
+        "tt-2101-sohan-minute"
+      ],
+      "bracketSeconds": 60
+    }
+  ],
+  "sources": [
+    {
+      "id": "ut-2024-sohan-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-01-01+00%3A00%27&STOP_TIME=%272024-01-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-sohan-hourly.txt",
+      "sha256": "09473e0c2adbda74558dc6ed69840117392f05b83cbaffa6c2da8b8063d62307",
+      "retrievedAt": "2026-09-19T06:58:18.027Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-sohan-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Jan-05+20%3A00%3A00%27&STOP_TIME=%272024-Jan-05+21%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-sohan-minute.txt",
+      "sha256": "f2c679f71ce3d65ef8b09c8ac42637b477bfa3f62fe1ca8527fb752c35303815",
+      "retrievedAt": "2026-09-19T06:58:20.094Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-ipchun-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-02-01+00%3A00%27&STOP_TIME=%272024-02-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-ipchun-hourly.txt",
+      "sha256": "a984deebfa16c3823a4d6347aba1a64cf23cfa8ce30f4277a042536f626afad4",
+      "retrievedAt": "2026-09-19T06:58:21.806Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-ipchun-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Feb-04+08%3A00%3A00%27&STOP_TIME=%272024-Feb-04+09%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-ipchun-minute.txt",
+      "sha256": "13d8810693408da91e67e0bbb0bfb861c5f5760d3cb75d270611bb06519f8d92",
+      "retrievedAt": "2026-09-19T06:58:23.681Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-gyeongchip-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-03-01+00%3A00%27&STOP_TIME=%272024-03-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-gyeongchip-hourly.txt",
+      "sha256": "feec7c44e4bb6003c503f177fb9a299a986cb55ad5afc0b2089483cc577f98c6",
+      "retrievedAt": "2026-09-19T06:58:25.594Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-gyeongchip-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Mar-05+02%3A00%3A00%27&STOP_TIME=%272024-Mar-05+03%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-gyeongchip-minute.txt",
+      "sha256": "ff85b83641bbc0693b287ef9a7ef09679344ee12d5cfd708e903f3363ae7763c",
+      "retrievedAt": "2026-09-19T06:58:27.346Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-cheongmyeong-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-04-01+00%3A00%27&STOP_TIME=%272024-04-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-cheongmyeong-hourly.txt",
+      "sha256": "5059d0cd62b3c93fcc7062b4858c489cad685a95c45297b9ebca488201e7d834",
+      "retrievedAt": "2026-09-19T06:58:29.257Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-cheongmyeong-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Apr-04+07%3A00%3A00%27&STOP_TIME=%272024-Apr-04+08%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-cheongmyeong-minute.txt",
+      "sha256": "323c95973b4aa1866089135631f8e10297dc3259023aafe05373bb80a76f7786",
+      "retrievedAt": "2026-09-19T06:58:31.136Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-ipha-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-05-01+00%3A00%27&STOP_TIME=%272024-05-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-ipha-hourly.txt",
+      "sha256": "ffb85d5bac1ee9634023333dbc960741aa1932bffb2f3ea893daa8219587839d",
+      "retrievedAt": "2026-09-19T06:58:32.951Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-ipha-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-May-05+00%3A00%3A00%27&STOP_TIME=%272024-May-05+01%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-ipha-minute.txt",
+      "sha256": "ec3ca8a7d7d383a8076e6cc1a12a580e38d498a036c83c131e9375679020beae",
+      "retrievedAt": "2026-09-19T06:58:34.879Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-mangjong-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-06-01+00%3A00%27&STOP_TIME=%272024-06-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-mangjong-hourly.txt",
+      "sha256": "0689d0a3de7b384abc1487352673bb7e12b965b7a97dcc1d30fdce2d2e4dd8c2",
+      "retrievedAt": "2026-09-19T06:58:36.868Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-mangjong-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Jun-05+04%3A00%3A00%27&STOP_TIME=%272024-Jun-05+05%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-mangjong-minute.txt",
+      "sha256": "6baec50afa6cefd9efff72a72e04cc103be11d604829066cfc47436d2f5d9b61",
+      "retrievedAt": "2026-09-19T06:58:39.115Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-soseo-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-07-01+00%3A00%27&STOP_TIME=%272024-07-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-soseo-hourly.txt",
+      "sha256": "1537cda016520622d0f1f2d38a2fd54218b740f05c6533f1083bbefb07a59bab",
+      "retrievedAt": "2026-09-19T06:58:41.130Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-soseo-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Jul-06+14%3A00%3A00%27&STOP_TIME=%272024-Jul-06+15%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-soseo-minute.txt",
+      "sha256": "8613a83b2023cca298744021dbf8fa2ef214ac94d7c7e25dcf38e80f2a371f9f",
+      "retrievedAt": "2026-09-19T06:58:43.359Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-ipchu-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-08-01+00%3A00%27&STOP_TIME=%272024-08-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-ipchu-hourly.txt",
+      "sha256": "c6148d00e9fe59ce2e0a7dba95431bbf1fbba4eca2e77e056b332fd614b75dce",
+      "retrievedAt": "2026-09-19T06:58:45.466Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-ipchu-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Aug-07+00%3A00%3A00%27&STOP_TIME=%272024-Aug-07+01%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-ipchu-minute.txt",
+      "sha256": "d70d1c9cfe067645eaf9539905ad4fcad8c048297916d48b6e6c86a1786356e4",
+      "retrievedAt": "2026-09-19T06:58:47.750Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-baengno-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-09-01+00%3A00%27&STOP_TIME=%272024-09-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-baengno-hourly.txt",
+      "sha256": "668b8e5b2a94480c4ace8a859e7f0f288c24dc6c7ae9fd216c095ed470a80f93",
+      "retrievedAt": "2026-09-19T06:58:49.915Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-baengno-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Sep-07+03%3A00%3A00%27&STOP_TIME=%272024-Sep-07+04%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-baengno-minute.txt",
+      "sha256": "c0103e0b0b448c5bd67078b780359935dbf137e80b49f9ed6b4cd8f86d26f6c2",
+      "retrievedAt": "2026-09-19T06:58:52.344Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-hallo-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-10-01+00%3A00%27&STOP_TIME=%272024-10-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-hallo-hourly.txt",
+      "sha256": "9d073fab074885e0e43728669d1ed91c90886f5cbad7239f05b057f19d70d7b3",
+      "retrievedAt": "2026-09-19T06:58:54.588Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-hallo-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Oct-07+18%3A00%3A00%27&STOP_TIME=%272024-Oct-07+19%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-hallo-minute.txt",
+      "sha256": "f8364dc319518f7e1ff726e0da9e75f71cdd9ad459962e065c3caa82639397e4",
+      "retrievedAt": "2026-09-19T06:58:56.892Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-ipdong-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-11-01+00%3A00%27&STOP_TIME=%272024-11-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-ipdong-hourly.txt",
+      "sha256": "1d28d66e754cd1fa6203094b4be98477a351eeb9093b3a4d7e388c7283638179",
+      "retrievedAt": "2026-09-19T06:58:59.231Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-ipdong-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Nov-06+22%3A00%3A00%27&STOP_TIME=%272024-Nov-06+23%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-ipdong-minute.txt",
+      "sha256": "55b3cffb0baac5337cf97fc0db6151d6487bc124d1e10e8a94bca53e95acd621",
+      "retrievedAt": "2026-09-19T06:59:01.365Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-daeseol-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-12-01+00%3A00%27&STOP_TIME=%272024-12-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-daeseol-hourly.txt",
+      "sha256": "48fe195e1793da2b1cd1cc14e3765c70049f12f27f3ab48cd02c98df4216387c",
+      "retrievedAt": "2026-09-19T06:59:03.652Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "ut-2024-daeseol-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=UT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272024-Dec-06+15%3A00%3A00%27&STOP_TIME=%272024-Dec-06+16%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/ut-2024-daeseol-minute.txt",
+      "sha256": "acbf22032626d250d47f9ffa3912e1aab5517494b6e43c72353540b733590d96",
+      "retrievedAt": "2026-09-19T06:59:05.842Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "UT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1900-ipchun-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271900-02-01+00%3A00%27&STOP_TIME=%271900-02-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1900-ipchun-hourly.txt",
+      "sha256": "5e6498f7ef9a4c9c4dcb65be651f6f97c7435e719659d289d5068d68e169d88c",
+      "retrievedAt": "2026-09-19T06:59:08.319Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1900-ipchun-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271900-Feb-04+05%3A00%3A00%27&STOP_TIME=%271900-Feb-04+06%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1900-ipchun-minute.txt",
+      "sha256": "2379784a5cd5f2761fa37970065233bba46e8734a121aa6c87475aec9432036f",
+      "retrievedAt": "2026-09-19T06:59:10.740Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1900-daeseol-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271900-12-01+00%3A00%27&STOP_TIME=%271900-12-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1900-daeseol-hourly.txt",
+      "sha256": "ff9719d0bf71aa552cab5f755b05eecbf010feaa73de9d3063144a9f61b6ee0e",
+      "retrievedAt": "2026-09-19T06:59:13.001Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1900-daeseol-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271900-Dec-07+12%3A00%3A00%27&STOP_TIME=%271900-Dec-07+13%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1900-daeseol-minute.txt",
+      "sha256": "abf4fd89d26e4df847a3c1bab2245f29c6accad2eca2db5189bb9d1ea08655cc",
+      "retrievedAt": "2026-09-19T06:59:15.206Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1954-ipchun-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271954-02-01+00%3A00%27&STOP_TIME=%271954-02-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1954-ipchun-hourly.txt",
+      "sha256": "45a0ef6406235deae588805854b9282a1977fd8f940bf2e6262516614d6edd84",
+      "retrievedAt": "2026-09-19T06:59:17.160Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1954-ipchun-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271954-Feb-04+08%3A00%3A00%27&STOP_TIME=%271954-Feb-04+09%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1954-ipchun-minute.txt",
+      "sha256": "f44b5d7581bc7eed318fe86379ba77f96c954ceba1d32c91e392a6deeaf8c9c4",
+      "retrievedAt": "2026-09-19T06:59:19.470Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1954-daeseol-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271954-12-01+00%3A00%27&STOP_TIME=%271954-12-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1954-daeseol-hourly.txt",
+      "sha256": "46506cc7c6620fbb517033e89f1bb554729d7cf6bcfe38f08931ccb9bd93bc66",
+      "retrievedAt": "2026-09-19T06:59:21.683Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1954-daeseol-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271954-Dec-07+15%3A00%3A00%27&STOP_TIME=%271954-Dec-07+16%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1954-daeseol-minute.txt",
+      "sha256": "7b3ec77bca67df79f0797b9522d543694f4783312fc1cdc7875a79d50d51e32b",
+      "retrievedAt": "2026-09-19T06:59:23.913Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1988-ipchun-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271988-02-01+00%3A00%27&STOP_TIME=%271988-02-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1988-ipchun-hourly.txt",
+      "sha256": "bc88cc61f629c2b91de1d9eccb9d11528149a6dd162168239c8fd2ca90fb146b",
+      "retrievedAt": "2026-09-19T06:59:25.954Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1988-ipchun-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271988-Feb-04+14%3A00%3A00%27&STOP_TIME=%271988-Feb-04+15%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1988-ipchun-minute.txt",
+      "sha256": "a097aa586a70f90faaec8e3f726be3de3239370262842e6051eb14b71b98cc2a",
+      "retrievedAt": "2026-09-19T06:59:28.412Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1988-daeseol-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271988-12-01+00%3A00%27&STOP_TIME=%271988-12-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1988-daeseol-hourly.txt",
+      "sha256": "652f0cb0921b263d0e4fc8cae9306ead42ad16a464e0eeb83603c1aaf24ad7ac",
+      "retrievedAt": "2026-09-19T06:59:30.823Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1988-daeseol-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271988-Dec-06+21%3A00%3A00%27&STOP_TIME=%271988-Dec-06+22%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1988-daeseol-minute.txt",
+      "sha256": "56791aae2172f141d1ab7cac6207f612a963a3115e7557d998a0a30735d3fe8e",
+      "retrievedAt": "2026-09-19T06:59:33.253Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2000-ipchun-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272000-02-01+00%3A00%27&STOP_TIME=%272000-02-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2000-ipchun-hourly.txt",
+      "sha256": "4a7734f9dbb1136295666118a88717d75216f4412dfecb7238887bc619b23224",
+      "retrievedAt": "2026-09-19T06:59:35.670Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2000-ipchun-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272000-Feb-04+12%3A00%3A00%27&STOP_TIME=%272000-Feb-04+13%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2000-ipchun-minute.txt",
+      "sha256": "9dec0bb0097dd8d4a6558a9572025761f80d3295875d7f8467c78e611fc9c67c",
+      "retrievedAt": "2026-09-19T06:59:38.281Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2000-daeseol-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272000-12-01+00%3A00%27&STOP_TIME=%272000-12-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2000-daeseol-hourly.txt",
+      "sha256": "e3b3f4288bc6c1620f542ea20dd96ce1e1d718a82eb59dadbeb7196f97eae6cd",
+      "retrievedAt": "2026-09-19T06:59:40.711Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2000-daeseol-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272000-Dec-06+19%3A00%3A00%27&STOP_TIME=%272000-Dec-06+20%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2000-daeseol-minute.txt",
+      "sha256": "fd30047c120ae9ae8863c93280eaaead1a42223847495f7cf096dc91b8a9ecec",
+      "retrievedAt": "2026-09-19T06:59:43.347Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2050-ipchun-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272050-02-01+00%3A00%27&STOP_TIME=%272050-02-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2050-ipchun-hourly.txt",
+      "sha256": "2ec6417364f6323cf162f2d96d09077779ecc1942973cf7ef7fd4288fd8a14b9",
+      "retrievedAt": "2026-09-19T06:59:45.804Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2050-ipchun-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272050-Feb-03+15%3A00%3A00%27&STOP_TIME=%272050-Feb-03+16%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2050-ipchun-minute.txt",
+      "sha256": "7916fd6cae80b098c5082ea9d0e93614c15acc7b5470854dbb914e32175d6738",
+      "retrievedAt": "2026-09-19T06:59:48.258Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2050-daeseol-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272050-12-01+00%3A00%27&STOP_TIME=%272050-12-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2050-daeseol-hourly.txt",
+      "sha256": "1103a163bcbefecd6d933ab8ee44456b2a3e9650161f4d63f5ba4585e88f8fa7",
+      "retrievedAt": "2026-09-19T06:59:50.787Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2050-daeseol-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272050-Dec-06+22%3A00%3A00%27&STOP_TIME=%272050-Dec-06+23%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2050-daeseol-minute.txt",
+      "sha256": "7e88c553f155edb2c46f3b165a8034c2fb5b033189cc6d5fe61865bf2f0e33dd",
+      "retrievedAt": "2026-09-19T06:59:53.374Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2100-ipchun-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272100-02-01+00%3A00%27&STOP_TIME=%272100-02-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2100-ipchun-hourly.txt",
+      "sha256": "1bc495e53ea4835f399402f69632885d57c07aa98d5dc75538aeb34587b18d61",
+      "retrievedAt": "2026-09-19T06:59:55.460Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2100-ipchun-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272100-Feb-03+19%3A00%3A00%27&STOP_TIME=%272100-Feb-03+20%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2100-ipchun-minute.txt",
+      "sha256": "b69ac09145b97e99c86b6d4dbb30581732bda3edcc1b41de9f96e8be72b617f8",
+      "retrievedAt": "2026-09-19T06:59:57.723Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2100-daeseol-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272100-12-01+00%3A00%27&STOP_TIME=%272100-12-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2100-daeseol-hourly.txt",
+      "sha256": "6c2b950fe39592e0bd231bd250eca7a78efd785b9899772a9e097c150d5b53d9",
+      "retrievedAt": "2026-09-19T06:59:59.779Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2100-daeseol-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272100-Dec-07+01%3A00%3A00%27&STOP_TIME=%272100-Dec-07+02%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2100-daeseol-minute.txt",
+      "sha256": "68afea575a3a602e2e227b0fbab2a45f1c76051eb4b572bb733f2ddda72b4f78",
+      "retrievedAt": "2026-09-19T07:00:02.136Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1899-daeseol-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271899-12-01+00%3A00%27&STOP_TIME=%271899-12-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1899-daeseol-hourly.txt",
+      "sha256": "0f5c4b8509fba7c50a8c74584d161cc3fa695f352c4d7f1db22e1d412e5553e4",
+      "retrievedAt": "2026-09-19T07:00:04.419Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-1899-daeseol-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%271899-Dec-07+07%3A00%3A00%27&STOP_TIME=%271899-Dec-07+08%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-1899-daeseol-minute.txt",
+      "sha256": "44e49d42b2b53537ef9e228242abe618750e7833ac0a9f10db73245aadb0a268",
+      "retrievedAt": "2026-09-19T07:00:06.738Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2101-sohan-hourly",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272101-01-01+00%3A00%27&STOP_TIME=%272101-01-11+00%3A00%27&STEP_SIZE=%271+h%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2101-sohan-hourly.txt",
+      "sha256": "736396a6fc5f00c5c52bd2838ae586129da5fdf219b00d2b28d022d80306f4de",
+      "retrievedAt": "2026-09-19T07:00:08.980Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    },
+    {
+      "id": "tt-2101-sohan-minute",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2710%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=OBSERVER&CENTER=500%40399&QUANTITIES=31&TIME_TYPE=TT&TIME_ZONE=%2B00%3A00&TIME_DIGITS=SECONDS&CAL_TYPE=GREGORIAN&APPARENT=AIRLESS&CSV_FORMAT=YES&EXTRA_PREC=YES&START_TIME=%272101-Jan-05+13%3A00%3A00%27&STOP_TIME=%272101-Jan-05+14%3A00%3A00%27&STEP_SIZE=%271+m%27",
+      "requestHeaders": {
+        "User-Agent": "saju-agent-deterministic-fixture-collector/1.0 (https://github.com/min9lin9/saju-agent; independent JPL Horizons reference capture)",
+        "Accept": "text/plain"
+      },
+      "rawFile": "raw/horizons/tt-2101-sohan-minute.txt",
+      "sha256": "1fc5ef8e885499e492808bbf6093f164983e27bd10493c7ffea2422a871d763f",
+      "retrievedAt": "2026-09-19T07:00:11.678Z",
+      "center": "500@399",
+      "quantity": "31",
+      "frame": "apparent-ecliptic-of-date",
+      "timeScale": "TT",
+      "apiVersion": "1.2",
+      "ephemerisSource": "DE441"
+    }
+  ]
+}

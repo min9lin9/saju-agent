@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "birth": {
+    "calendar": "solar",
+    "date": "2024-03-10",
+    "time": "02:30:00",
+    "timezone": "America/New_York",
+    "gender": "female"
+  },
+  "queries": {
+    "majorCycles": 0,
+    "transits": []
+  }
+}

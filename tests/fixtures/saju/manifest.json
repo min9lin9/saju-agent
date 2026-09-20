@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "rulesetId": "kr-civil-midnight-v1",
+  "purpose": "Integrity manifest for the independent saju test fixtures. Lists every fixture file with its sha256 and the authoritative expected data each request fixture exercises. Expected values here are anchored to the archived upstream raw responses (KASI solc JSON, JPL Horizons OBSERVER quantity-31 text) and to the plan contract, never to the runtime under test.",
+  "generatedAt": "2026-09-19",
+  "fixtures": {
+    "calendar": {
+      "file": "calendar.json",
+      "sha256": "6f9f33c5b0ab58eb38f4d5d95418dd2848921bfc6b734a7fe696d34e1c1f0258",
+      "role": "KASI-anchored solar<->lunar conversion and day-pillar cases",
+      "caseCount": 3,
+      "sourceCount": 3,
+      "anchorFields": {
+        "dayGanZhi": "LUNC_ILJIN parenthesized Hanzi only",
+        "lunarDate": "LUNC_YYYY/LUNC_MM/LUNC_DD",
+        "leapMonth": "LUNC_LEAP_MM 윤=true 평=false",
+        "solarDate": "SOLC_YYYY/SOLC_MM/SOLC_DD echoed from the request URL",
+        "quarantined": ["LUNC_PRCN", "LUNC_WLGN"]
+      }
+    },
+    "solarTerms": {
+      "file": "solar-terms.json",
+      "sha256": "6e553313e82019b327efa9063966be6a9f19baac49218f38d683125e05846a98",
+      "role": "JPL Horizons independent solar-term oracle",
+      "caseCount": 26,
+      "sourceCount": 52,
+      "requiredProvenance": {
+        "center": "500@399",
+        "quantity": "31",
+        "frame": "apparent-ecliptic-of-date",
+        "apiVersion": "1.2",
+        "ephemerisSource": "DE441",
+        "utCases": 12,
+        "ttCases": 14,
+        "toleranceSeconds": 120,
+        "maxBracketSeconds": 60
+      }
+    },
+    "rules": {
+      "file": "rules.json",
+      "sha256": "8e69ea1f67a4134df0e664e99decd05c7de9a7caf93cbc895fe00a86125241c7",
+      "role": "Literal school-policy rule tables (declared convention, not astronomical evidence)",
+      "evidenceClass": "policy"
+    },
+    "astrologyBaseline": {
+      "file": "astrology-baseline.json",
+      "sha256": "367fbdb2628096d103a251cb2144ffd5395869913b12233b73187619c6074180",
+      "role": "Golden parsed output of legacy skills/saju/scripts/natal.mjs for synthetic inputs",
+      "pinnedScript": "skills/saju/scripts/natal.mjs",
+      "pinnedScriptSha256": "9e84e862f7dec959744335f2516f884992a635901cdf7b086bb6517a67faeb50"
+    },
+    "requests": {
+      "known": {
+        "file": "requests/known.json",
+        "sha256": "b0b0edaffc5cfc61ed0774e988a816001f6b0a6d4298c62599cede437f795a6c",
+        "expect": {
+          "outcome": "success",
+          "exit": 0,
+          "derivedFacts": {
+            "solarDate": "1998-10-27",
+            "dayGanZhi": "丁未",
+            "dayGanZhiAnchor": "kasi-solc-1998-10-27"
+          },
+          "majorCyclesRequested": 10,
+          "transitsRequested": 1
+        }
+      },
+      "unknown-time": {
+        "file": "requests/unknown-time.json",
+        "sha256": "0ccc4b9cf0c309a0e593d45fefdbb9c4b9b3fe9c08501ecbf929a7280c22e30c",
+        "expect": {
+          "outcome": "success",
+          "exit": 0,
+          "limitations": ["UNKNOWN_BIRTH_TIME"],
+          "hourPillar": null,
+          "majorCyclesRequested": 4
+        }
+      },
+      "invalid-date": {
+        "file": "requests/invalid-date.json",
+        "sha256": "1723c25b9da4eba498f49614baf62a599051c5185a709d6fc69ed13ebed97268",
+        "expect": {
+          "outcome": "input-error",
+          "exit": 2,
+          "path": "birth.date",
+          "violation": "2026-02-30 is not a Gregorian date"
+        }
+      },
+      "lunar-leap": {
+        "file": "requests/lunar-leap.json",
+        "sha256": "f57bfed6d2e4ee5358c3a7df24b6285da652365e8ebba1236f228ef4f9259d35",
+        "expect": {
+          "outcome": "success",
+          "exit": 0,
+          "derivedFacts": {
+            "convertedSolarDate": "2017-06-24",
+            "dayGanZhi": "壬午",
+            "dayGanZhiAnchor": "kasi-solc-2017-06-24"
+          }
+        }
+      },
+      "missing-gender": {
+        "file": "requests/missing-gender.json",
+        "sha256": "1740cead074f37b7b0a371e2ce2cdd9b60f92c6190aaacaed785bbb68f7b4d00",
+        "expect": {
+          "outcome": "success",
+          "exit": 0,
+          "limitations": ["MISSING_MAJOR_DIRECTION"],
+          "majorCyclesRequested": 10
+        }
+      },
+      "transits": {
+        "file": "requests/transits.json",
+        "sha256": "4ec903210cce1574840b8d4b588f8ad0a596939a6fff193744feb8c780835646",
+        "expect": {
+          "outcome": "success",
+          "exit": 0,
+          "transitsRequested": 3,
+          "retainOrderAndDuplicates": true
+        }
+      },
+      "dst-gap": {
+        "file": "requests/dst-gap.json",
+        "sha256": "1e9e41208a0e813f5e62fd7e24f1bf5f2353fdc7aec0b6624296b272f7418391",
+        "expect": {
+          "outcome": "input-error",
+          "exit": 2,
+          "code": "NONEXISTENT_LOCAL_TIME",
+          "path": "birth.time",
+          "violation": "2024-03-10 02:30 does not exist in America/New_York and no utcOffset was supplied"
+        }
+      },
+      "dst-fold": {
+        "file": "requests/dst-fold.json",
+        "sha256": "fcfe259aab3af8ec3054b824405b1c58044fedffc4abca6b893353b324cd27f5",
+        "expect": {
+          "outcome": "input-error",
+          "exit": 2,
+          "code": "AMBIGUOUS_LOCAL_TIME",
+          "path": "birth.time",
+          "violation": "2024-11-03 01:30 occurs twice in America/New_York and no utcOffset was supplied"
+        }
+      },
+      "out-of-range": {
+        "file": "requests/out-of-range.json",
+        "sha256": "ac0db24d3ee8062f8dec56be9891ee6af3da8ae75d9c7c23a1c6950b7b3fee4d",
+        "expect": {
+          "outcome": "input-error",
+          "exit": 2,
+          "path": "birth.date",
+          "violation": "1899-12-31 is below the 1900-01-01 solar support floor"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,279 @@
+// cli.test.mjs — public process contract for the deterministic saju CLI.
+//
+// Spawns the real CLI (`node skills/saju/scripts/saju.mjs --input <file>`)
+// via spawnSync with an argv array — never shell string concatenation — and
+// asserts only machine-consumed values: exit codes, stdout/stderr JSON
+// fields, stable top-level field order, byte-identical reruns, limitation
+// codes and fixture-anchored derived facts (KASI-anchored day pillars and
+// lunar conversions from tests/fixtures/saju/manifest.json).
+//
+// Determinism: no sleeps, no polling, no ambient clock; every assertion is
+// on the spawned process's captured output.
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const repoRoot = join(here, '..', '..');
+const CLI = join(repoRoot, 'skills', 'saju', 'scripts', 'saju.mjs');
+const REQUESTS = join(repoRoot, 'tests', 'fixtures', 'saju', 'requests');
+const MANIFEST = JSON.parse(
+  readFileSync(join(repoRoot, 'tests', 'fixtures', 'saju', 'manifest.json'), 'utf8'),
+);
+
+const runCli = (args) => spawnSync(process.execPath, [CLI, ...args], {
+  encoding: 'utf8',
+  maxBuffer: 64 * 1024 * 1024,
+});
+
+const runFixture = (name) => runCli(['--input', join(REQUESTS, `${name}.json`)]);
+
+const expect = (name) => MANIFEST.fixtures.requests[name].expect;
+
+// Parses a successful run: exit 0, non-empty stdout that is one JSON object.
+const okResult = (proc) => {
+  assert.equal(proc.error, undefined, `spawn error: ${proc.error}`);
+  assert.equal(proc.status, 0, `exit ${proc.status}; stderr: ${proc.stderr}`);
+  assert.ok(proc.stdout.length > 0, 'stdout must not be empty on success');
+  return JSON.parse(proc.stdout);
+};
+
+// Parses a rejected run: exit 2, empty stdout, stderr JSON {error:{code,...}}.
+const errResult = (proc) => {
+  assert.equal(proc.error, undefined, `spawn error: ${proc.error}`);
+  assert.equal(proc.status, 2, `exit ${proc.status}; stdout: ${proc.stdout}`);
+  assert.equal(proc.stdout, '', 'stdout must be empty on rejection');
+  const parsed = JSON.parse(proc.stderr);
+  assert.equal(typeof parsed.error, 'object');
+  assert.equal(typeof parsed.error.code, 'string');
+  assert.ok('path' in parsed.error);
+  assert.equal(typeof parsed.error.message, 'string');
+  return parsed.error;
+};
+
+const TOP_LEVEL_ORDER = [
+  'schemaVersion', 'rulesetId', 'provenance', 'input', 'calendar',
+  'natal', 'majorCycles', 'transits', 'limitations',
+];
+
+test('known.json: exit 0, all required sections, stable top-level field order', () => {
+  const result = okResult(runFixture('known'));
+  assert.deepEqual(Object.keys(result), TOP_LEVEL_ORDER);
+  assert.equal(result.schemaVersion, 1);
+  assert.equal(result.rulesetId, 'kr-civil-midnight-v1');
+
+  // input echoes the validated request
+  assert.equal(result.input.birth.calendar, 'solar');
+  assert.equal(result.input.birth.date, '1998-10-27');
+  assert.equal(result.input.birth.time, '20:40:00');
+  assert.equal(result.input.birth.timezone, 'Asia/Seoul');
+  assert.equal(result.input.birth.utcOffset, '+09:00');
+  assert.equal(result.input.birth.gender, 'male');
+  assert.equal(result.input.queries.majorCycles, expect('known').majorCyclesRequested);
+  assert.deepEqual(result.input.queries.transits, ['2026-09-17T12:00:00+09:00']);
+
+  // calendar section: supplied fields, solar date, lunar metadata, resolved
+  // instant, surrounding jie events with UTC instants and event IDs
+  assert.equal(result.calendar.supplied.date, '1998-10-27');
+  assert.equal(result.calendar.supplied.calendar, 'solar');
+  assert.equal(result.calendar.supplied.time, '20:40:00');
+  assert.equal(result.calendar.supplied.timezone, 'Asia/Seoul');
+  assert.equal(result.calendar.solarDate, expect('known').derivedFacts.solarDate);
+  assert.deepEqual(result.calendar.lunar, { year: 1998, month: 9, day: 8, leapMonth: false });
+  assert.equal(result.calendar.resolvedInstant.iso, '1998-10-27T11:40:00.000Z');
+  assert.equal(result.calendar.resolvedInstant.utcOffset, '+09:00');
+  assert.ok(Array.isArray(result.calendar.jieEvents));
+  assert.ok(result.calendar.jieEvents.length >= 3);
+  for (const ev of result.calendar.jieEvents) {
+    assert.equal(typeof ev.eventId, 'string');
+    assert.equal(typeof ev.termId, 'string');
+    assert.equal(typeof ev.iso, 'string');
+    assert.ok(Number.isInteger(ev.instantMs));
+  }
+  const sorted = [...result.calendar.jieEvents].sort((a, b) => a.instantMs - b.instantMs);
+  assert.deepEqual(result.calendar.jieEvents, sorted, 'jieEvents sorted by instantMs');
+  assert.ok(result.calendar.jieEvents.some((e) => e.termId === 'hallo'));
+
+  // natal: KASI-anchored day pillar, four pillars, day master, coverage
+  assert.equal(result.natal.candidates.length, 1);
+  const pillars = result.natal.candidates[0].pillars;
+  assert.equal(pillars.day.ganZhi, expect('known').derivedFacts.dayGanZhi);
+  assert.equal(pillars.day.id, 'natal.day');
+  assert.equal(pillars.hour.id, 'natal.hour');
+  assert.equal(result.natal.dayMaster.stem.hanzi, '丁');
+  assert.equal(result.natal.coverageComplete, true);
+
+  // majorCycles: 10 cycles emitted with the declared convention
+  assert.equal(result.majorCycles.available, true);
+  assert.equal(result.majorCycles.convention, 'three-days-calendar-v1');
+  assert.equal(result.majorCycles.count, 10);
+  const cycleCount = result.majorCycles.candidates
+    .reduce((n, c) => n + c.ranges.reduce((m, r) => m + r.cycles.length, 0), 0);
+  assert.equal(cycleCount, 10);
+
+  // transits: one item carrying the age contract and contexts
+  assert.equal(result.transits.length, expect('known').transitsRequested);
+  const tr = result.transits[0];
+  assert.equal(tr.age.system, 'completed-solar-years');
+  assert.equal(tr.age.years, 27); // 2026-09-17 precedes the 1998-10-27 anniversary
+  assert.equal(tr.age.asOfDate, '2026-09-17');
+  assert.equal(tr.age.timezone, 'Asia/Seoul');
+  assert.equal(tr.age.anniversaryPolicy, 'month-day-march1-for-feb29');
+  assert.equal(tr.age.reason, null);
+  assert.ok(Array.isArray(tr.pillarCandidates) && tr.pillarCandidates.length >= 1);
+  assert.ok(Array.isArray(tr.contexts) && tr.contexts.length >= 1);
+  assert.equal(tr.contexts[0].activeMajorCycle.status, 'determinate');
+
+  // provenance: exact package versions, rule hashes, runtime versions, IDs
+  const p = result.provenance;
+  assert.equal(p.packages['astronomy-engine'].declared, '2.1.19');
+  assert.equal(p.packages['astronomy-engine'].resolved, '2.1.19');
+  assert.equal(p.packages['korean-lunar-calendar'].declared, '0.4.0');
+  assert.equal(p.packages['korean-lunar-calendar'].resolved, '0.4.0');
+  assert.match(p.ruleTables['saju/rules.json'].sha256, /^[0-9a-f]{64}$/);
+  assert.match(p.ruleTables['saju/relation-rules.json'].sha256, /^[0-9a-f]{64}$/);
+  assert.equal(p.ruleTables['saju/rules.json'].canonicalization, 'stable-stringify-v1');
+  assert.equal(p.runtime.node, process.versions.node);
+  assert.equal(p.runtime.icu, process.versions.icu ?? null);
+  assert.equal(p.runtime.tz, process.versions.tz ?? null);
+  assert.equal(p.calendarConverter.id, 'korean-lunar-calendar');
+  assert.equal(p.calendarConverter.version, '0.4.0');
+  assert.equal(p.ephemeris.id, 'astronomy-engine');
+  assert.equal(p.ephemeris.version, '2.1.19');
+
+  // limitations: array of {code,path,details} sorted by code then path
+  assert.ok(Array.isArray(result.limitations));
+  for (const lim of result.limitations) {
+    assert.deepEqual(Object.keys(lim), ['code', 'path', 'details']);
+  }
+  const keys = result.limitations.map((l) => `${l.code}\u0000${l.path}`);
+  assert.deepEqual(keys, [...keys].sort(), 'limitations sorted by code then path');
+});
+
+test('known.json: two runs produce byte-identical stdout', () => {
+  const a = runFixture('known');
+  const b = runFixture('known');
+  assert.equal(a.status, 0);
+  assert.equal(b.status, 0);
+  assert.equal(a.stdout, b.stdout, 'stdout must be byte-identical across runs');
+  assert.equal(a.stderr, b.stderr);
+});
+
+test('invalid-date.json: exit 2, empty stdout, stderr error.code', () => {
+  const err = errResult(runFixture('invalid-date'));
+  assert.equal(err.code, 'INVALID_DATE');
+  assert.equal(err.path, expect('invalid-date').path);
+});
+
+test('out-of-range.json: exit 2 with typed error', () => {
+  const err = errResult(runFixture('out-of-range'));
+  assert.equal(err.code, 'DATE_OUT_OF_RANGE');
+  assert.equal(err.path, expect('out-of-range').path);
+});
+
+test('unknown input path: exit 2, empty stdout, error.code on stderr', () => {
+  const err = errResult(runCli(['--input', join(REQUESTS, 'does-not-exist.json')]));
+  assert.equal(typeof err.code, 'string');
+});
+
+test('unknown-time.json: exit 0, null hour pillar, UNKNOWN_BIRTH_TIME', () => {
+  const result = okResult(runFixture('unknown-time'));
+  assert.deepEqual(Object.keys(result), TOP_LEVEL_ORDER);
+  assert.ok(result.natal.candidates.length >= 1);
+  for (const cand of result.natal.candidates) {
+    assert.equal(cand.pillars.hour, null, 'hour pillar stays null, never inferred');
+  }
+  assert.equal(result.natal.coverageComplete, false);
+  assert.equal(result.calendar.resolvedInstant, null);
+  const codes = result.limitations.map((l) => l.code);
+  assert.ok(codes.includes('UNKNOWN_BIRTH_TIME'));
+  const lim = result.limitations.find((l) => l.code === 'UNKNOWN_BIRTH_TIME');
+  assert.equal(lim.path, 'birth.time');
+  assert.equal(result.majorCycles.count, expect('unknown-time').majorCyclesRequested);
+  assert.equal(result.majorCycles.available, true);
+});
+
+test('missing-gender.json with majorCycles>0: MISSING_MAJOR_DIRECTION', () => {
+  const result = okResult(runFixture('missing-gender'));
+  const codes = result.limitations.map((l) => l.code);
+  assert.ok(codes.includes('MISSING_MAJOR_DIRECTION'));
+  const lim = result.limitations.find((l) => l.code === 'MISSING_MAJOR_DIRECTION');
+  assert.equal(lim.path, 'birth.gender');
+  assert.equal(result.majorCycles.available, false);
+  assert.equal(result.majorCycles.count, expect('missing-gender').majorCyclesRequested);
+  // natal derivation is unaffected by the missing gender
+  assert.equal(result.natal.candidates[0].pillars.day.ganZhi, '丁未');
+});
+
+test('transits.json: items carry age, pillarCandidates and contexts; order kept', () => {
+  const result = okResult(runFixture('transits'));
+  assert.equal(result.transits.length, expect('transits').transitsRequested);
+  assert.deepEqual(
+    result.transits.map((t) => t.input),
+    ['2026-09-17T12:00:00+09:00', '2027-01-01T00:00:00Z', '2026-09-17T12:00:00+09:00'],
+  );
+  assert.deepEqual(result.transits.map((t) => t.index), [0, 1, 2]);
+  for (const tr of result.transits) {
+    assert.equal(tr.age.system, 'completed-solar-years');
+    assert.ok(Number.isInteger(tr.age.years));
+    assert.ok(Array.isArray(tr.pillarCandidates) && tr.pillarCandidates.length >= 1);
+    for (const pc of tr.pillarCandidates) {
+      for (const key of ['annual', 'monthly', 'daily']) {
+        assert.equal(typeof pc.pillars[key].ganZhi, 'string');
+      }
+    }
+    assert.ok(Array.isArray(tr.contexts) && tr.contexts.length >= 1);
+    // majorCycles was not requested: never manufactured for transit output
+    assert.equal(tr.contexts[0].activeMajorCycle.status, 'not_requested');
+  }
+  assert.equal(result.transits[0].age.years, 27);
+  assert.equal(result.transits[1].age.years, 28); // 2027-01-01 Seoul local date
+  assert.equal(result.transits[1].local.date, '2027-01-01');
+  assert.equal(result.majorCycles.count, 0);
+  assert.equal(result.majorCycles.candidates.length, 0);
+  const codes = result.limitations.map((l) => l.code);
+  assert.ok(!codes.includes('MISSING_MAJOR_DIRECTION'),
+    'no missing-gender warning when cycles were not requested');
+});
+
+test('lunar-leap.json: lunar 2017-05-01 leap converts to solar 2017-06-24', () => {
+  const result = okResult(runFixture('lunar-leap'));
+  assert.equal(result.input.birth.calendar, 'korean_lunar');
+  assert.equal(result.input.birth.leapMonth, true);
+  assert.equal(result.calendar.supplied.date, '2017-05-01');
+  assert.equal(result.calendar.supplied.leapMonth, true);
+  assert.equal(result.calendar.solarDate, expect('lunar-leap').derivedFacts.convertedSolarDate);
+  assert.deepEqual(result.calendar.lunar, { year: 2017, month: 5, day: 1, leapMonth: true });
+  assert.equal(
+    result.natal.candidates[0].pillars.day.ganZhi,
+    expect('lunar-leap').derivedFacts.dayGanZhi,
+  );
+});
+
+test('dst-gap.json: exit 2 NONEXISTENT_LOCAL_TIME', () => {
+  const err = errResult(runFixture('dst-gap'));
+  assert.equal(err.code, 'NONEXISTENT_LOCAL_TIME');
+  assert.equal(err.path, expect('dst-gap').path);
+});
+
+test('dst-fold.json: exit 2 AMBIGUOUS_LOCAL_TIME', () => {
+  const err = errResult(runFixture('dst-fold'));
+  assert.equal(err.code, 'AMBIGUOUS_LOCAL_TIME');
+  assert.equal(err.path, expect('dst-fold').path);
+});
+
+test('malformed JSON input: exit 2 with error.code', () => {
+  const dir = join(here, '.tmp-cli-test');
+  const file = join(dir, 'not-json.json');
+  mkdirSync(dir, { recursive: true });
+  try {
+    writeFileSync(file, '{ not json');
+    const err = errResult(runCli(['--input', file]));
+    assert.equal(err.code, 'INVALID_JSON');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

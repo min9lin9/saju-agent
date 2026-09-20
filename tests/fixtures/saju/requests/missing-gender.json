@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "birth": {
+    "calendar": "solar",
+    "date": "1998-10-27",
+    "time": "20:40:00",
+    "timezone": "Asia/Seoul",
+    "utcOffset": "+09:00"
+  },
+  "queries": {
+    "majorCycles": 10,
+    "transits": []
+  }
+}

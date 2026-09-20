@@ -1,0 +1,1087 @@
+{
+  "description": "Golden baseline of legacy astrology runtime (skills/saju/scripts/natal.mjs) captured before any modification. Synthetic birth inputs only.",
+  "capturedAt": "2026-09-19",
+  "source": {
+    "script": "skills/saju/scripts/natal.mjs",
+    "sha256": "9e84e862f7dec959744335f2516f884992a635901cdf7b086bb6517a67faeb50",
+    "sha256Note": "Re-pinned 2026-09-20: script gained DST gap/fold stderr warnings (F2-6). Numeric stdout unchanged — golden baseline fields below still match byte-for-byte.",
+    "dependency": {
+      "astronomy-engine": "2.1.19"
+    },
+    "node": "v25.9.0"
+  },
+  "natal": {
+    "input": {
+      "year": 1990,
+      "month": 3,
+      "day": 15,
+      "hour": 10,
+      "minute": 30,
+      "latitude": 37.5665,
+      "longitude": 126.978,
+      "timezone": "Asia/Seoul",
+      "city": "서울"
+    },
+    "expected": {
+      "standard": "ASTROLOGER_V3_TROPICAL_WHOLE_SIGN",
+      "subject": {
+        "name": "User",
+        "year": 1990,
+        "month": 3,
+        "day": 15,
+        "hour": 10,
+        "minute": 30,
+        "isTimeUnknown": false,
+        "city": "서울",
+        "latitude": 37.5665,
+        "longitude": 126.978,
+        "timezone": "Asia/Seoul"
+      },
+      "utcDate": "1990-03-15T01:30:00.000Z",
+      "angles": [
+        {
+          "name": "ASC",
+          "longitude": 251.6835,
+          "sign": "Sagittarius",
+          "signKo": "사수자리",
+          "degreeInSign": 11.6835
+        },
+        {
+          "name": "MC",
+          "longitude": 319.4603,
+          "sign": "Aquarius",
+          "signKo": "물병자리",
+          "degreeInSign": 19.4603
+        }
+      ],
+      "houses": [
+        {
+          "house": 1,
+          "sign": "Sagittarius",
+          "signKo": "사수자리",
+          "startLongitude": 240
+        },
+        {
+          "house": 2,
+          "sign": "Capricorn",
+          "signKo": "염소자리",
+          "startLongitude": 270
+        },
+        {
+          "house": 3,
+          "sign": "Aquarius",
+          "signKo": "물병자리",
+          "startLongitude": 300
+        },
+        {
+          "house": 4,
+          "sign": "Pisces",
+          "signKo": "물고기자리",
+          "startLongitude": 330
+        },
+        {
+          "house": 5,
+          "sign": "Aries",
+          "signKo": "양자리",
+          "startLongitude": 0
+        },
+        {
+          "house": 6,
+          "sign": "Taurus",
+          "signKo": "황소자리",
+          "startLongitude": 30
+        },
+        {
+          "house": 7,
+          "sign": "Gemini",
+          "signKo": "쌍둥이자리",
+          "startLongitude": 60
+        },
+        {
+          "house": 8,
+          "sign": "Cancer",
+          "signKo": "게자리",
+          "startLongitude": 90
+        },
+        {
+          "house": 9,
+          "sign": "Leo",
+          "signKo": "사자자리",
+          "startLongitude": 120
+        },
+        {
+          "house": 10,
+          "sign": "Virgo",
+          "signKo": "처녀자리",
+          "startLongitude": 150
+        },
+        {
+          "house": 11,
+          "sign": "Libra",
+          "signKo": "천칭자리",
+          "startLongitude": 180
+        },
+        {
+          "house": 12,
+          "sign": "Scorpio",
+          "signKo": "전갈자리",
+          "startLongitude": 210
+        }
+      ],
+      "planets": [
+        {
+          "body": "Sun",
+          "longitude": 354.2044,
+          "sign": "Pisces",
+          "signKo": "물고기자리",
+          "degreeInSign": 24.2044,
+          "house": 4
+        },
+        {
+          "body": "Moon",
+          "longitude": 174.3099,
+          "sign": "Virgo",
+          "signKo": "처녀자리",
+          "degreeInSign": 24.3099,
+          "house": 10
+        },
+        {
+          "body": "Mercury",
+          "longitude": 340.3296,
+          "sign": "Pisces",
+          "signKo": "물고기자리",
+          "degreeInSign": 10.3296,
+          "house": 4
+        },
+        {
+          "body": "Venus",
+          "longitude": 207.9231,
+          "sign": "Libra",
+          "signKo": "천칭자리",
+          "degreeInSign": 27.9231,
+          "house": 11
+        },
+        {
+          "body": "Mars",
+          "longitude": 270.0778,
+          "sign": "Capricorn",
+          "signKo": "염소자리",
+          "degreeInSign": 0.0778,
+          "house": 2
+        },
+        {
+          "body": "Jupiter",
+          "longitude": 102.3417,
+          "sign": "Cancer",
+          "signKo": "게자리",
+          "degreeInSign": 12.3417,
+          "house": 8
+        },
+        {
+          "body": "Saturn",
+          "longitude": 288.3328,
+          "sign": "Capricorn",
+          "signKo": "염소자리",
+          "degreeInSign": 18.3328,
+          "house": 2
+        },
+        {
+          "body": "Uranus",
+          "longitude": 276.3713,
+          "sign": "Capricorn",
+          "signKo": "염소자리",
+          "degreeInSign": 6.3713,
+          "house": 2
+        },
+        {
+          "body": "Neptune",
+          "longitude": 282.5164,
+          "sign": "Capricorn",
+          "signKo": "염소자리",
+          "degreeInSign": 12.5164,
+          "house": 2
+        },
+        {
+          "body": "Pluto",
+          "longitude": 226.0206,
+          "sign": "Scorpio",
+          "signKo": "전갈자리",
+          "degreeInSign": 16.0206,
+          "house": 12
+        }
+      ],
+      "aspects": [
+        {
+          "type": "opposition",
+          "bodyA": "Sun",
+          "bodyB": "Moon",
+          "orb": 0.105
+        },
+        {
+          "type": "opposition",
+          "bodyA": "Jupiter",
+          "bodyB": "Neptune",
+          "orb": 0.175
+        },
+        {
+          "type": "trine",
+          "bodyA": "Mercury",
+          "bodyB": "Jupiter",
+          "orb": 2.012
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Venus",
+          "bodyB": "Mars",
+          "orb": 2.155
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Mercury",
+          "bodyB": "Neptune",
+          "orb": 2.187
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Saturn",
+          "bodyB": "Pluto",
+          "orb": 2.312
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Neptune",
+          "bodyB": "Pluto",
+          "orb": 3.504
+        },
+        {
+          "type": "trine",
+          "bodyA": "Jupiter",
+          "bodyB": "Pluto",
+          "orb": 3.679
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Mercury",
+          "bodyB": "Uranus",
+          "orb": 3.958
+        },
+        {
+          "type": "trine",
+          "bodyA": "Mercury",
+          "bodyB": "Pluto",
+          "orb": 5.691
+        },
+        {
+          "type": "square",
+          "bodyA": "Moon",
+          "bodyB": "Mars",
+          "orb": 5.768
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Saturn",
+          "bodyB": "Neptune",
+          "orb": 5.816
+        },
+        {
+          "type": "square",
+          "bodyA": "Sun",
+          "bodyB": "Mars",
+          "orb": 5.873
+        },
+        {
+          "type": "opposition",
+          "bodyA": "Jupiter",
+          "bodyB": "Uranus",
+          "orb": 5.97
+        },
+        {
+          "type": "trine",
+          "bodyA": "Moon",
+          "bodyB": "Saturn",
+          "orb": 5.977
+        },
+        {
+          "type": "opposition",
+          "bodyA": "Jupiter",
+          "bodyB": "Saturn",
+          "orb": 5.991
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Uranus",
+          "bodyB": "Neptune",
+          "orb": 6.145
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Mars",
+          "bodyB": "Uranus",
+          "orb": 6.293
+        }
+      ]
+    }
+  },
+  "synastry": {
+    "input": {
+      "person1": {
+        "year": 1990,
+        "month": 3,
+        "day": 15,
+        "hour": 10,
+        "minute": 30,
+        "latitude": 37.5665,
+        "longitude": 126.978,
+        "timezone": "Asia/Seoul",
+        "city": "서울"
+      },
+      "person2": {
+        "year": 1992,
+        "month": 7,
+        "day": 22,
+        "hour": 14,
+        "minute": 45,
+        "latitude": 35.1796,
+        "longitude": 129.0756,
+        "timezone": "Asia/Seoul",
+        "city": "부산"
+      }
+    },
+    "expected": {
+      "score": 89,
+      "aspects": [
+        {
+          "type": "sextile",
+          "bodyA": "Pluto",
+          "bodyB": "Uranus",
+          "orb": 0.167
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Saturn",
+          "bodyB": "Neptune",
+          "orb": 0.689
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Uranus",
+          "bodyB": "Mercury",
+          "orb": 1.127
+        },
+        {
+          "type": "square",
+          "bodyA": "Saturn",
+          "bodyB": "Mars",
+          "orb": 1.273
+        },
+        {
+          "type": "square",
+          "bodyA": "Pluto",
+          "bodyB": "Saturn",
+          "orb": 1.389
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Pluto",
+          "bodyB": "Neptune",
+          "orb": 1.623
+        },
+        {
+          "type": "square",
+          "bodyA": "Venus",
+          "bodyB": "Sun",
+          "orb": 1.742
+        },
+        {
+          "type": "square",
+          "bodyA": "Venus",
+          "bodyB": "Moon",
+          "orb": 1.895
+        },
+        {
+          "type": "trine",
+          "bodyA": "Sun",
+          "bodyB": "Pluto",
+          "orb": 2.138
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Saturn",
+          "bodyB": "Uranus",
+          "orb": 2.145
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Moon",
+          "bodyB": "Pluto",
+          "orb": 2.243
+        },
+        {
+          "type": "trine",
+          "bodyA": "Saturn",
+          "bodyB": "Jupiter",
+          "orb": 2.398
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Venus",
+          "bodyB": "Venus",
+          "orb": 2.501
+        },
+        {
+          "type": "opposition",
+          "bodyA": "Sun",
+          "bodyB": "Jupiter",
+          "orb": 3.474
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Moon",
+          "bodyB": "Jupiter",
+          "orb": 3.579
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Neptune",
+          "bodyB": "Uranus",
+          "orb": 3.671
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Saturn",
+          "bodyB": "Pluto",
+          "orb": 3.734
+        },
+        {
+          "type": "opposition",
+          "bodyA": "Jupiter",
+          "bodyB": "Uranus",
+          "orb": 3.846
+        },
+        {
+          "type": "square",
+          "bodyA": "Neptune",
+          "bodyB": "Mars",
+          "orb": 4.544
+        },
+        {
+          "type": "trine",
+          "bodyA": "Mars",
+          "bodyB": "Venus",
+          "orb": 4.656
+        },
+        {
+          "type": "sextile",
+          "bodyA": "Pluto",
+          "bodyB": "Jupiter",
+          "orb": 4.71
+        },
+        {
+          "type": "square",
+          "bodyA": "Jupiter",
+          "bodyB": "Mars",
+          "orb": 4.718
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Neptune",
+          "bodyB": "Neptune",
+          "orb": 5.127
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Mars",
+          "bodyB": "Mercury",
+          "orb": 5.167
+        },
+        {
+          "type": "opposition",
+          "bodyA": "Jupiter",
+          "bodyB": "Neptune",
+          "orb": 5.302
+        },
+        {
+          "type": "trine",
+          "bodyA": "Sun",
+          "bodyB": "Sun",
+          "orb": 5.46
+        },
+        {
+          "type": "trine",
+          "bodyA": "Moon",
+          "bodyB": "Moon",
+          "orb": 5.508
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Pluto",
+          "bodyB": "Pluto",
+          "orb": 6.046
+        },
+        {
+          "type": "opposition",
+          "bodyA": "Jupiter",
+          "bodyB": "Mercury",
+          "orb": 7.097
+        },
+        {
+          "type": "conjunction",
+          "bodyA": "Neptune",
+          "bodyB": "Mercury",
+          "orb": 7.272
+        }
+      ],
+      "summary": "강한 조화와 끌림이 보여요.",
+      "chartA": {
+        "standard": "ASTROLOGER_V3_TROPICAL_WHOLE_SIGN",
+        "subject": {
+          "name": "User",
+          "year": 1990,
+          "month": 3,
+          "day": 15,
+          "hour": 10,
+          "minute": 30,
+          "isTimeUnknown": false,
+          "city": "서울",
+          "latitude": 37.5665,
+          "longitude": 126.978,
+          "timezone": "Asia/Seoul"
+        },
+        "utcDate": "1990-03-15T01:30:00.000Z",
+        "angles": [
+          {
+            "name": "ASC",
+            "longitude": 251.6835,
+            "sign": "Sagittarius",
+            "signKo": "사수자리",
+            "degreeInSign": 11.6835
+          },
+          {
+            "name": "MC",
+            "longitude": 319.4603,
+            "sign": "Aquarius",
+            "signKo": "물병자리",
+            "degreeInSign": 19.4603
+          }
+        ],
+        "houses": [
+          {
+            "house": 1,
+            "sign": "Sagittarius",
+            "signKo": "사수자리",
+            "startLongitude": 240
+          },
+          {
+            "house": 2,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "startLongitude": 270
+          },
+          {
+            "house": 3,
+            "sign": "Aquarius",
+            "signKo": "물병자리",
+            "startLongitude": 300
+          },
+          {
+            "house": 4,
+            "sign": "Pisces",
+            "signKo": "물고기자리",
+            "startLongitude": 330
+          },
+          {
+            "house": 5,
+            "sign": "Aries",
+            "signKo": "양자리",
+            "startLongitude": 0
+          },
+          {
+            "house": 6,
+            "sign": "Taurus",
+            "signKo": "황소자리",
+            "startLongitude": 30
+          },
+          {
+            "house": 7,
+            "sign": "Gemini",
+            "signKo": "쌍둥이자리",
+            "startLongitude": 60
+          },
+          {
+            "house": 8,
+            "sign": "Cancer",
+            "signKo": "게자리",
+            "startLongitude": 90
+          },
+          {
+            "house": 9,
+            "sign": "Leo",
+            "signKo": "사자자리",
+            "startLongitude": 120
+          },
+          {
+            "house": 10,
+            "sign": "Virgo",
+            "signKo": "처녀자리",
+            "startLongitude": 150
+          },
+          {
+            "house": 11,
+            "sign": "Libra",
+            "signKo": "천칭자리",
+            "startLongitude": 180
+          },
+          {
+            "house": 12,
+            "sign": "Scorpio",
+            "signKo": "전갈자리",
+            "startLongitude": 210
+          }
+        ],
+        "planets": [
+          {
+            "body": "Sun",
+            "longitude": 354.2044,
+            "sign": "Pisces",
+            "signKo": "물고기자리",
+            "degreeInSign": 24.2044,
+            "house": 4
+          },
+          {
+            "body": "Moon",
+            "longitude": 174.3099,
+            "sign": "Virgo",
+            "signKo": "처녀자리",
+            "degreeInSign": 24.3099,
+            "house": 10
+          },
+          {
+            "body": "Mercury",
+            "longitude": 340.3296,
+            "sign": "Pisces",
+            "signKo": "물고기자리",
+            "degreeInSign": 10.3296,
+            "house": 4
+          },
+          {
+            "body": "Venus",
+            "longitude": 207.9231,
+            "sign": "Libra",
+            "signKo": "천칭자리",
+            "degreeInSign": 27.9231,
+            "house": 11
+          },
+          {
+            "body": "Mars",
+            "longitude": 270.0778,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "degreeInSign": 0.0778,
+            "house": 2
+          },
+          {
+            "body": "Jupiter",
+            "longitude": 102.3417,
+            "sign": "Cancer",
+            "signKo": "게자리",
+            "degreeInSign": 12.3417,
+            "house": 8
+          },
+          {
+            "body": "Saturn",
+            "longitude": 288.3328,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "degreeInSign": 18.3328,
+            "house": 2
+          },
+          {
+            "body": "Uranus",
+            "longitude": 276.3713,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "degreeInSign": 6.3713,
+            "house": 2
+          },
+          {
+            "body": "Neptune",
+            "longitude": 282.5164,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "degreeInSign": 12.5164,
+            "house": 2
+          },
+          {
+            "body": "Pluto",
+            "longitude": 226.0206,
+            "sign": "Scorpio",
+            "signKo": "전갈자리",
+            "degreeInSign": 16.0206,
+            "house": 12
+          }
+        ],
+        "aspects": [
+          {
+            "type": "opposition",
+            "bodyA": "Sun",
+            "bodyB": "Moon",
+            "orb": 0.105
+          },
+          {
+            "type": "opposition",
+            "bodyA": "Jupiter",
+            "bodyB": "Neptune",
+            "orb": 0.175
+          },
+          {
+            "type": "trine",
+            "bodyA": "Mercury",
+            "bodyB": "Jupiter",
+            "orb": 2.012
+          },
+          {
+            "type": "sextile",
+            "bodyA": "Venus",
+            "bodyB": "Mars",
+            "orb": 2.155
+          },
+          {
+            "type": "sextile",
+            "bodyA": "Mercury",
+            "bodyB": "Neptune",
+            "orb": 2.187
+          },
+          {
+            "type": "sextile",
+            "bodyA": "Saturn",
+            "bodyB": "Pluto",
+            "orb": 2.312
+          },
+          {
+            "type": "sextile",
+            "bodyA": "Neptune",
+            "bodyB": "Pluto",
+            "orb": 3.504
+          },
+          {
+            "type": "trine",
+            "bodyA": "Jupiter",
+            "bodyB": "Pluto",
+            "orb": 3.679
+          },
+          {
+            "type": "sextile",
+            "bodyA": "Mercury",
+            "bodyB": "Uranus",
+            "orb": 3.958
+          },
+          {
+            "type": "trine",
+            "bodyA": "Mercury",
+            "bodyB": "Pluto",
+            "orb": 5.691
+          },
+          {
+            "type": "square",
+            "bodyA": "Moon",
+            "bodyB": "Mars",
+            "orb": 5.768
+          },
+          {
+            "type": "conjunction",
+            "bodyA": "Saturn",
+            "bodyB": "Neptune",
+            "orb": 5.816
+          },
+          {
+            "type": "square",
+            "bodyA": "Sun",
+            "bodyB": "Mars",
+            "orb": 5.873
+          },
+          {
+            "type": "opposition",
+            "bodyA": "Jupiter",
+            "bodyB": "Uranus",
+            "orb": 5.97
+          },
+          {
+            "type": "trine",
+            "bodyA": "Moon",
+            "bodyB": "Saturn",
+            "orb": 5.977
+          },
+          {
+            "type": "opposition",
+            "bodyA": "Jupiter",
+            "bodyB": "Saturn",
+            "orb": 5.991
+          },
+          {
+            "type": "conjunction",
+            "bodyA": "Uranus",
+            "bodyB": "Neptune",
+            "orb": 6.145
+          },
+          {
+            "type": "conjunction",
+            "bodyA": "Mars",
+            "bodyB": "Uranus",
+            "orb": 6.293
+          }
+        ]
+      },
+      "chartB": {
+        "standard": "ASTROLOGER_V3_TROPICAL_WHOLE_SIGN",
+        "subject": {
+          "name": "User",
+          "year": 1992,
+          "month": 7,
+          "day": 22,
+          "hour": 14,
+          "minute": 45,
+          "isTimeUnknown": false,
+          "city": "부산",
+          "latitude": 35.1796,
+          "longitude": 129.0756,
+          "timezone": "Asia/Seoul"
+        },
+        "utcDate": "1992-07-22T05:45:00.000Z",
+        "angles": [
+          {
+            "name": "ASC",
+            "longitude": 54.0591,
+            "sign": "Taurus",
+            "signKo": "황소자리",
+            "degreeInSign": 24.0591
+          },
+          {
+            "name": "MC",
+            "longitude": 153.648,
+            "sign": "Virgo",
+            "signKo": "처녀자리",
+            "degreeInSign": 3.648
+          }
+        ],
+        "houses": [
+          {
+            "house": 1,
+            "sign": "Taurus",
+            "signKo": "황소자리",
+            "startLongitude": 30
+          },
+          {
+            "house": 2,
+            "sign": "Gemini",
+            "signKo": "쌍둥이자리",
+            "startLongitude": 60
+          },
+          {
+            "house": 3,
+            "sign": "Cancer",
+            "signKo": "게자리",
+            "startLongitude": 90
+          },
+          {
+            "house": 4,
+            "sign": "Leo",
+            "signKo": "사자자리",
+            "startLongitude": 120
+          },
+          {
+            "house": 5,
+            "sign": "Virgo",
+            "signKo": "처녀자리",
+            "startLongitude": 150
+          },
+          {
+            "house": 6,
+            "sign": "Libra",
+            "signKo": "천칭자리",
+            "startLongitude": 180
+          },
+          {
+            "house": 7,
+            "sign": "Scorpio",
+            "signKo": "전갈자리",
+            "startLongitude": 210
+          },
+          {
+            "house": 8,
+            "sign": "Sagittarius",
+            "signKo": "사수자리",
+            "startLongitude": 240
+          },
+          {
+            "house": 9,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "startLongitude": 270
+          },
+          {
+            "house": 10,
+            "sign": "Aquarius",
+            "signKo": "물병자리",
+            "startLongitude": 300
+          },
+          {
+            "house": 11,
+            "sign": "Pisces",
+            "signKo": "물고기자리",
+            "startLongitude": 330
+          },
+          {
+            "house": 12,
+            "sign": "Aries",
+            "signKo": "양자리",
+            "startLongitude": 0
+          }
+        ],
+        "planets": [
+          {
+            "body": "Sun",
+            "longitude": 119.6648,
+            "sign": "Cancer",
+            "signKo": "게자리",
+            "degreeInSign": 29.6648,
+            "house": 3
+          },
+          {
+            "body": "Moon",
+            "longitude": 299.8182,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "degreeInSign": 29.8182,
+            "house": 9
+          },
+          {
+            "body": "Mercury",
+            "longitude": 275.2444,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "degreeInSign": 5.2444,
+            "house": 9
+          },
+          {
+            "body": "Venus",
+            "longitude": 145.422,
+            "sign": "Leo",
+            "signKo": "사자자리",
+            "degreeInSign": 25.422,
+            "house": 4
+          },
+          {
+            "body": "Mars",
+            "longitude": 17.06,
+            "sign": "Aries",
+            "signKo": "양자리",
+            "degreeInSign": 17.06,
+            "house": 12
+          },
+          {
+            "body": "Jupiter",
+            "longitude": 170.7308,
+            "sign": "Virgo",
+            "signKo": "처녀자리",
+            "degreeInSign": 20.7308,
+            "house": 5
+          },
+          {
+            "body": "Saturn",
+            "longitude": 314.632,
+            "sign": "Aquarius",
+            "signKo": "물병자리",
+            "degreeInSign": 14.632,
+            "house": 10
+          },
+          {
+            "body": "Uranus",
+            "longitude": 286.1877,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "degreeInSign": 16.1877,
+            "house": 9
+          },
+          {
+            "body": "Neptune",
+            "longitude": 287.6439,
+            "sign": "Capricorn",
+            "signKo": "염소자리",
+            "degreeInSign": 17.6439,
+            "house": 9
+          },
+          {
+            "body": "Pluto",
+            "longitude": 232.0669,
+            "sign": "Scorpio",
+            "signKo": "전갈자리",
+            "degreeInSign": 22.0669,
+            "house": 7
+          }
+        ],
+        "aspects": [
+          {
+            "type": "opposition",
+            "bodyA": "Sun",
+            "bodyB": "Moon",
+            "orb": 0.153
+          },
+          {
+            "type": "square",
+            "bodyA": "Mars",
+            "bodyB": "Neptune",
+            "orb": 0.584
+          },
+          {
+            "type": "square",
+            "bodyA": "Mars",
+            "bodyB": "Uranus",
+            "orb": 0.872
+          },
+          {
+            "type": "sextile",
+            "bodyA": "Jupiter",
+            "bodyB": "Pluto",
+            "orb": 1.336
+          },
+          {
+            "type": "conjunction",
+            "bodyA": "Uranus",
+            "bodyB": "Neptune",
+            "orb": 1.456
+          },
+          {
+            "type": "sextile",
+            "bodyA": "Mars",
+            "bodyB": "Saturn",
+            "orb": 2.428
+          },
+          {
+            "type": "trine",
+            "bodyA": "Jupiter",
+            "bodyB": "Neptune",
+            "orb": 3.087
+          },
+          {
+            "type": "square",
+            "bodyA": "Venus",
+            "bodyB": "Pluto",
+            "orb": 3.355
+          },
+          {
+            "type": "sextile",
+            "bodyA": "Neptune",
+            "bodyB": "Pluto",
+            "orb": 4.423
+          },
+          {
+            "type": "trine",
+            "bodyA": "Jupiter",
+            "bodyB": "Uranus",
+            "orb": 4.543
+          }
+        ]
+      }
+    }
+  }
+}
