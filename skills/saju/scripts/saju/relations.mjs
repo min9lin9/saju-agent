@@ -47,6 +47,12 @@ export function loadRelationRules(url = RELATION_RULES_URL) {
   return JSON.parse(readFileSync(url, 'utf8'));
 }
 
+// The default table is immutable after load; cache it so per-candidate
+// detectRelations calls do not re-read the file. Explicit `rules` arguments
+// bypass the cache entirely.
+let defaultRelationRules;
+const defaultRules = () => (defaultRelationRules ??= loadRelationRules());
+
 // An occurrence is a day-xun reference when its ID is 'day' or ends in '.day'
 // (e.g. natal.day, candidate.0.day). Other suffixes such as daily transit
 // pillars are not day-xun references.
@@ -148,7 +154,7 @@ const record = (ruleId, occs, completion, extra = {}) => ({
   transformationStatus: 'not_evaluated',
 });
 
-export function detectRelations(occurrences, rules = loadRelationRules()) {
+export function detectRelations(occurrences, rules = defaultRules()) {
   validateOccurrences(occurrences);
   const t = validateRuleTables(rules);
 

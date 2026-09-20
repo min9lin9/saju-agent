@@ -3,7 +3,8 @@
   "capturedAt": "2026-09-19",
   "source": {
     "script": "skills/saju/scripts/natal.mjs",
-    "sha256": "8b2a47ea7d2d193b120f64cab5d2c799c5f9f1ac6a437efc6be4ee46830bcd55",
+    "sha256": "9e84e862f7dec959744335f2516f884992a635901cdf7b086bb6517a67faeb50",
+    "sha256Note": "Re-pinned 2026-09-20: script gained DST gap/fold stderr warnings (F2-6). Numeric stdout unchanged — golden baseline fields below still match byte-for-byte.",
     "dependency": {
       "astronomy-engine": "2.1.19"
     },

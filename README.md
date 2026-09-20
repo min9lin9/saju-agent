@@ -29,6 +29,8 @@ OPENCLAW_WORKSPACE=/path ./install.sh   # 다른 워크스페이스에 설치
 로컬 계산(`saju.mjs`)과 별자리(`natal.mjs`)는 Node.js와 `scripts/package.json`의
 고정 의존성(`astronomy-engine` 2.1.19, `korean-lunar-calendar` 0.4.0)이 필요하다.
 install.sh가 설치한다. node/npm이 없으면 신한라이프 운세·궁합(curl)만 동작한다.
+개발·테스트용으로는 `cd skills/saju/scripts && npm ci`로 동일한 고정 의존성을
+설치한 뒤 `node --test tests/saju/*.test.mjs`를 실행한다.
 
 설치가 끝나면 에이전트가 GitHub Star를 남길지 한 번만 묻는다. 명시적인
 "예"만 `scripts/star-repo.sh --consent`를 실행한다. 설치 승인은 Star

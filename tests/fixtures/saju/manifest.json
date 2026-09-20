@@ -44,10 +44,10 @@
     },
     "astrologyBaseline": {
       "file": "astrology-baseline.json",
-      "sha256": "67322d3ca30e219892a9a7c35e71ca30ab033cca3a91ef8a13cb624a5eb4777a",
+      "sha256": "367fbdb2628096d103a251cb2144ffd5395869913b12233b73187619c6074180",
       "role": "Golden parsed output of legacy skills/saju/scripts/natal.mjs for synthetic inputs",
       "pinnedScript": "skills/saju/scripts/natal.mjs",
-      "pinnedScriptSha256": "8b2a47ea7d2d193b120f64cab5d2c799c5f9f1ac6a437efc6be4ee46830bcd55"
+      "pinnedScriptSha256": "9e84e862f7dec959744335f2516f884992a635901cdf7b086bb6517a67faeb50"
     },
     "requests": {
       "known": {

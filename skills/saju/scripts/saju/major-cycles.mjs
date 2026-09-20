@@ -42,6 +42,7 @@
 import {
   daysInMonth,
   formatUtcOffset,
+  offsetSecondsAt,
   wallFieldsAt,
 } from './time.mjs';
 import { createCalendar } from './calendar.mjs';
@@ -104,18 +105,10 @@ const wallWithMs = (timezone, instantMs, path) => ({
 const wallMsOf = (w) => utcMs(w.year, w.month, w.day, w.hour, w.minute, w.second, w.ms ?? 0);
 const wallMsAt = (timezone, instantMs, path) => wallMsOf(wallWithMs(timezone, instantMs, path));
 
-// Signed seconds the zone is ahead of UTC at the instant. time.mjs
-// offsetSecondsAt compares a second-truncated wall against the exact
-// instant, which yields fractional pseudo-offsets for millisecond
-// instants; this module compares ms-exact walls, so real zone offsets
-// (always whole seconds) come out exact.
-const offsetSecondsExact = (timezone, instantMs, path) =>
-  (wallMsAt(timezone, instantMs, path) - instantMs) / 1000;
-
 const distinctOffsets = (timezone, guessMs, path) => {
   const offsets = new Set();
   for (let t = guessMs - WINDOW_MS; t <= guessMs + WINDOW_MS; t += SAMPLE_MS) {
-    offsets.add(offsetSecondsExact(timezone, t, path));
+    offsets.add(offsetSecondsAt(timezone, t, path));
   }
   return offsets;
 };
@@ -203,7 +196,7 @@ const resolveStartWall = (timezone, wall, path) => {
     instantMs,
     iso: isoOf(instantMs),
     wall: wallWithMs(timezone, instantMs, path),
-    utcOffset: formatUtcOffset(offsetSecondsExact(timezone, instantMs, path)),
+    utcOffset: formatUtcOffset(offsetSecondsAt(timezone, instantMs, path)),
     offsetPolicy,
   };
 };
@@ -410,7 +403,8 @@ const rangeForPiece = (timezone, piece, jie, direction, index, monthIdx, step, c
 export const computeMajorCycles = ({ birth, natal, count, calendar, rules }) => {
   const path = 'birth.timezone';
   if (!birth || typeof birth !== 'object' || typeof birth.timezone !== 'string'
-      || !birth.date || !Number.isInteger(birth.date.year) || !Number.isInteger(birth.date.month)) {
+      || !birth.date || !Number.isInteger(birth.date.year) || !Number.isInteger(birth.date.month)
+      || !Number.isInteger(birth.date.day)) {
     throw new MajorCycleError(
       'INVALID_INPUT', 'birth',
       `birth needs {date:{year,month,day}, timezone, gender}, got ${JSON.stringify(birth)}`,

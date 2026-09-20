@@ -31,7 +31,8 @@ const RFC3339_RE =
 // Enumeration window: +/-48h around the wall-time-as-UTC guess covers every
 // real zone offset (max |offset| is far below 24h) plus margin for historic
 // LMT. The plan calls for hourly sampling; 15-minute sampling is strictly
-// finer, so no offset island between transitions can be missed.
+// finer. An offset island shorter than the sample step could in principle be
+// missed, but no real IANA zone has sub-15-minute transitions.
 const WINDOW_MS = 48 * 3600 * 1000;
 const SAMPLE_MS = 15 * 60 * 1000;
 
@@ -184,10 +185,14 @@ export const wallFieldsAt = (timezone, instantMs, path = 'birth.timezone') => {
   };
 };
 
-// Signed seconds the zone is ahead of UTC at the instant, second precision.
+// Signed seconds the zone is ahead of UTC at the instant. The wall fields
+// are second-truncated, so the instant's sub-second remainder is added back
+// to keep real zone offsets (always whole seconds) exact for ms instants.
 export const offsetSecondsAt = (timezone, instantMs, path = 'birth.timezone') => {
   const w = wallFieldsAt(timezone, instantMs, path);
-  return (utcMs(w.year, w.month, w.day, w.hour, w.minute, w.second) - instantMs) / 1000;
+  const wallMs = utcMs(w.year, w.month, w.day, w.hour, w.minute, w.second)
+    + (((instantMs % 1000) + 1000) % 1000);
+  return (wallMs - instantMs) / 1000;
 };
 
 // Enumerates the distinct zone offsets inside guess +/- WINDOW_MS.

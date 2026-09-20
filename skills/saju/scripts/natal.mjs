@@ -58,13 +58,29 @@ const localPartsForUtc = (date, timezone) => {
 
 const zonedTimeToUtc = (input) => {
   const t = { year: input.year, month: input.month, day: input.day, hour: input.hour, minute: input.minute };
-  let utcMs = Date.UTC(t.year, t.month - 1, t.day, t.hour, t.minute, 0);
+  const targetMs = Date.UTC(t.year, t.month - 1, t.day, t.hour, t.minute, 0);
+  let utcMs = targetMs;
   for (let i = 0; i < 3; i++) {
     const o = localPartsForUtc(new Date(utcMs), input.timezone);
     const diff = Date.UTC(o.year, o.month - 1, o.day, o.hour, o.minute, o.second)
-               - Date.UTC(t.year, t.month - 1, t.day, t.hour, t.minute, 0);
+               - targetMs;
     if (diff === 0) break;
     utcMs -= diff;
+  }
+  // DST edge warnings: this CLI resolves silently; surface the policy used.
+  const resolved = localPartsForUtc(new Date(utcMs), input.timezone);
+  const resolvedMs = Date.UTC(resolved.year, resolved.month - 1, resolved.day, resolved.hour, resolved.minute, resolved.second);
+  if (resolvedMs !== targetMs) {
+    process.stderr.write(`[natal] warning: ${input.timezone} local time does not exist (DST gap); resolved to ${resolved.year}-${String(resolved.month).padStart(2, '0')}-${String(resolved.day).padStart(2, '0')} ${String(resolved.hour).padStart(2, '0')}:${String(resolved.minute).padStart(2, '0')}\n`);
+  } else {
+    // Ambiguous fold: another instant maps to the same local time.
+    for (const probe of [utcMs - 3600000, utcMs + 3600000]) {
+      const p = localPartsForUtc(new Date(probe), input.timezone);
+      if (Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second) === targetMs) {
+        process.stderr.write(`[natal] warning: ${input.timezone} local time is ambiguous (DST fold); resolved to ${new Date(utcMs).toISOString()}\n`);
+        break;
+      }
+    }
   }
   return new Date(utcMs);
 };

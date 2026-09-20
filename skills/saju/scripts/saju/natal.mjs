@@ -211,11 +211,19 @@ const hiddenStemsOf = (T, branchHanzi) => {
     ? T.hiddenWeights.single
     : stems.length === 3 ? T.hiddenWeights.triple : T.hiddenWeights.double;
   const weights = Array.isArray(w) ? w : [w];
-  return stems.map((hanzi, i) => ({
-    rank: i + 1,
-    stem: T.stemByHanzi.get(hanzi),
-    weightTenths: Math.round(weights[i] * 10),
-  }));
+  return stems.map((hanzi, i) => {
+    if (!Number.isFinite(weights[i])) {
+      throw new NatalError(
+        'INVALID_RULE_TABLE', 'rules.hiddenStems',
+        `hidden-stem weights desync for branch ${branchHanzi}: rank ${i + 1} has no finite weight`,
+      );
+    }
+    return {
+      rank: i + 1,
+      stem: T.stemByHanzi.get(hanzi),
+      weightTenths: Math.round(weights[i] * 10),
+    };
+  });
 };
 
 const buildPillar = (T, id, index, stemIdx, branchIdx, dayStem) => {

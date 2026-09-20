@@ -583,6 +583,65 @@ test('invalid inputs reject with stable codes', () => {
   );
 });
 
+test('reverse direction: unknown-time jie-day splits use the previous jie before T0', () => {
+  // Yin-year female is forward; use a yin-year MALE (reverse) on the same
+  // jie-day shape as the forward test above. Reverse pieces: t < T0 ->
+  // 'previous' jie, t >= T0 -> 'current'.
+  const T0 = ms('2023-03-10T12:00:00.000Z'); // 2023 癸卯 is a yin year
+  const terms = {
+    '2023-02': { termId: 'ipchun', ms: ms('2023-02-04T12:00:00Z') },
+    '2023-03': { termId: 'gyeongchip', ms: T0 },
+    '2023-04': { termId: 'cheongmyeong', ms: ms('2023-04-05T12:00:00Z') },
+  };
+  const natal = natalFor({
+    date: { year: 2023, month: 3, day: 10 }, time: null, timezone: 'UTC', terms,
+  });
+  const r = computeMajorCycles({
+    birth: { date: { year: 2023, month: 3, day: 10 }, timezone: 'UTC', gender: 'male' },
+    natal, count: 1, calendar: stubCalendar(terms),
+  });
+  assert.equal(r.candidates.length, 2);
+  const [before, after] = r.candidates;
+  assert.equal(before.direction, 'reverse');
+  assert.equal(after.direction, 'reverse');
+
+  // 'before' candidate: interval [day start, T0+120s+1ms] splits at T0 into
+  // a 'previous' piece (t < T0, distance back to the February ipchun jie)
+  // and a 'current' piece (t >= T0, distance back to T0 itself).
+  assert.equal(before.ranges.length, 2);
+  const [bPrev, bCur] = before.ranges;
+  assert.equal(bPrev.adjacentJie.role, 'previous');
+  assert.equal(bPrev.adjacentJie.termId, 'ipchun');
+  assert.equal(bPrev.birthInstants.startIso, '2023-03-10T00:00:00.000Z');
+  assert.equal(bPrev.birthInstants.endMs, T0);
+  assert.equal(bPrev.birthInstants.endInclusive, false);
+  // Reverse distance: ipchun (Feb 4 12:00) -> birth. min at day start
+  // (33d12h = 2894400 s), max supremum at T0 (34d = 2937600 s).
+  assert.equal(bPrev.distance.minMs, 2894400000);
+  assert.equal(bPrev.distance.maxMs, 2937600000);
+  assert.equal(bCur.adjacentJie.role, 'current');
+  assert.equal(bCur.adjacentJie.termId, 'gyeongchip');
+  assert.equal(bCur.birthInstants.startMs, T0);
+  assert.equal(bCur.birthInstants.startInclusive, true);
+  assert.equal(bCur.distance.minMs, 0);
+  assert.equal(bCur.distance.maxMs, 120001);
+
+  // 'after' candidate: interval [T0-120s, day end) splits the same way.
+  assert.equal(after.ranges.length, 2);
+  const [aPrev, aCur] = after.ranges;
+  assert.equal(aPrev.adjacentJie.role, 'previous');
+  assert.equal(aPrev.adjacentJie.termId, 'ipchun');
+  assert.equal(aPrev.birthInstants.startMs, T0 - 120000);
+  assert.equal(aPrev.birthInstants.endMs, T0);
+  assert.equal(aPrev.birthInstants.endInclusive, false);
+  // ipchun -> birth: 34d-120s .. 34d supremum.
+  assert.equal(aPrev.distance.minMs, 2937480000);
+  assert.equal(aPrev.distance.maxMs, 2937600000);
+  assert.equal(aCur.adjacentJie.role, 'current');
+  assert.equal(aCur.distance.minMs, 0);
+  assert.equal(aCur.distance.maxMs, 43200000); // T0 -> day end
+});
+
 test('output is deterministic: identical inputs give identical results', () => {
   const req = request('known');
   const birth = birthOf(req);

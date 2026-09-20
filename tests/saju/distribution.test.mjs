@@ -313,25 +313,29 @@ test('failure path: missing or corrupt rule file in a disposable copy fails hard
     assert.equal(missingRules.status, 2);
     assert.equal(missingRules.error.code, 'ENOENT');
 
-    // Missing relation-rules.json → same contract.
+    // Missing relation-rules.json → same contract. rules.json is restored
+    // first so this case actually exercises relation-rules (it loads second).
+    copyFileSync(join(destScripts, 'saju', 'rules.json'), join(copyScripts, 'saju', 'rules.json'));
     rmSync(join(copyScripts, 'saju', 'relation-rules.json'));
     const missingRel = errResult(runSaju(copyScripts, 'known'));
     assert.equal(missingRel.status, 2);
     assert.equal(missingRel.error.code, 'ENOENT');
 
     // Corrupt rules.json (invalid JSON) → untyped SyntaxError →
-    // INTERNAL_ERROR, exit 1, empty stdout.
-    copyFileSync(join(destScripts, 'saju', 'rules.json'), join(copyScripts, 'saju', 'rules.json'));
+    // INTERNAL_ERROR, exit 1, empty stdout. relation-rules.json is restored
+    // first so this case exercises rules.json, not the still-missing file.
+    copyFileSync(
+      join(destScripts, 'saju', 'relation-rules.json'),
+      join(copyScripts, 'saju', 'relation-rules.json'),
+    );
     writeFileSync(join(copyScripts, 'saju', 'rules.json'), '{ not json\n');
     const corruptRules = errResult(runSaju(copyScripts, 'known'));
     assert.equal(corruptRules.status, 1);
     assert.equal(corruptRules.error.code, 'INTERNAL_ERROR');
 
-    // Corrupt relation-rules.json → same contract.
-    copyFileSync(
-      join(destScripts, 'saju', 'relation-rules.json'),
-      join(copyScripts, 'saju', 'relation-rules.json'),
-    );
+    // Corrupt relation-rules.json → same contract. rules.json is restored
+    // first so this case actually reaches the relation-rules load.
+    copyFileSync(join(destScripts, 'saju', 'rules.json'), join(copyScripts, 'saju', 'rules.json'));
     writeFileSync(join(copyScripts, 'saju', 'relation-rules.json'), 'not json\n');
     const corruptRel = errResult(runSaju(copyScripts, 'known'));
     assert.equal(corruptRel.status, 1);

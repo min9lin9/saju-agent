@@ -60,6 +60,7 @@ import { detectRelations, loadRelationRules } from './relations.mjs';
 import {
   daysInMonth,
   formatUtcOffset,
+  offsetSecondsAt,
   parseRfc3339Instant,
   wallFieldsAt,
 } from './time.mjs';
@@ -129,11 +130,19 @@ const hiddenStemsOf = (T, branchHanzi) => {
     ? T.hiddenWeights.single
     : stems.length === 3 ? T.hiddenWeights.triple : T.hiddenWeights.double;
   const weights = Array.isArray(w) ? w : [w];
-  return stems.map((hanzi, i) => ({
-    rank: i + 1,
-    stem: T.stemByHanzi.get(hanzi),
-    weightTenths: Math.round(weights[i] * 10),
-  }));
+  return stems.map((hanzi, i) => {
+    if (!Number.isFinite(weights[i])) {
+      throw new TransitError(
+        'INVALID_RULE_TABLE', 'rules.hiddenStems',
+        `hidden-stem weights desync for branch ${branchHanzi}: rank ${i + 1} has no finite weight`,
+      );
+    }
+    return {
+      rank: i + 1,
+      stem: T.stemByHanzi.get(hanzi),
+      weightTenths: Math.round(weights[i] * 10),
+    };
+  });
 };
 
 // Plain pillar (no day-master-relative fields): the shared, natal-independent
@@ -190,15 +199,6 @@ const sajuYearFor = (year, month, side) =>
 const monthBranchFor = (month, side) => mod(month - (side === 'before' ? 1 : 0), 12);
 
 // Signed seconds the zone is ahead of UTC at the instant, computed from
-// millisecond-exact wall fields so real zone offsets (always whole seconds)
-// come out exact even for sub-second instants.
-const offsetSecondsExact = (timezone, instantMs, path) => {
-  const w = wallFieldsAt(timezone, instantMs, path);
-  const wallMs = utcMs(w.year, w.month, w.day, w.hour, w.minute, w.second)
-    + mod(instantMs, 1000);
-  return (wallMs - instantMs) / 1000;
-};
-
 // --- input normalization --------------------------------------------------------
 
 // Accepts either raw RFC3339 strings (validated here) or the normalized
@@ -515,7 +515,7 @@ export const computeTransits = ({
         hour: wall.hour,
         minute: wall.minute,
         second: wall.second,
-        utcOffset: formatUtcOffset(offsetSecondsExact(timezone, target.instantMs, 'birth.timezone')),
+        utcOffset: formatUtcOffset(offsetSecondsAt(timezone, target.instantMs, 'birth.timezone')),
       },
       age: transitAge(birthDate, localDate, timezone),
       pillarCandidates,
